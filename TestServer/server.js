@@ -38,7 +38,7 @@ app.get('/', function (req, res) {
 io.on('connection', function (socket) {
     // simple test
     socket.on('hi', function () {
-        socket.emit('hi');
+        socket.emit('hi','more data');
     });
 
     // ack tests
