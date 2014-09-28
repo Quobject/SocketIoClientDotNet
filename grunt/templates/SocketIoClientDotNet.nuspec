@@ -9,21 +9,21 @@
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <dependencies>
       <group targetFramework="netcore45">
-        <dependency id="Json.NET" version="6.0.5" />
+        <dependency id="Newtonsoft.Json" version="6.0.5" />
         <dependency id="EngineIoClientDotNet" version="0.9.5" />
       </group>
       <group targetFramework="portable-wpa81+wp81">
-        <dependency id="Json.NET" version="6.0.5" />
+        <dependency id="Newtonsoft.Json" version="6.0.5" />
         <dependency id="EngineIoClientDotNet" version="0.9.5" />
       </group>
       <group targetFramework="net45">
         <dependency id="WebSocket4Net" version="0.10" />
-        <dependency id="Json.NET" version="6.0.5" />
+        <dependency id="Newtonsoft.Json" version="6.0.5" />
         <dependency id="EngineIoClientDotNet" version="0.9.5" />
       </group>
       <group targetFramework="windowsphone8">
         <dependency id="WebSocket4Net" version="0.10" />
-        <dependency id="Json.NET" version="6.0.5" />
+        <dependency id="Newtonsoft.Json" version="6.0.5" />
         <dependency id="EngineIoClientDotNet" version="0.9.5" />
       </group>
     </dependencies>
