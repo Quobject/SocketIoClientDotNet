@@ -1,0 +1,18 @@
+﻿{  
+  "version":"0.9.0",
+  "server":{  
+    "port":80,
+    "ssl_port":443,
+    "hostname":"testme.quobject.com"
+  },
+  "win":{  
+    "powershell":"C:/WINDOWS/System32/WindowsPowerShell/v1.0/powershell.exe",
+    "msbuild":"C:/Windows/Microsoft.NET/Framework/v4.0.30319/msbuild.exe",
+    "xunit_path":"C:/vendors/xunit",
+    "nuget":"C:/vendors/nuget/nuget.exe"
+  },
+  "linux":{  
+    "msbuild":"xbuild",
+    "xunit_path":"/home/apollo/vendors/xunit"
+  }
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>SocketIoClientDotNet</id>
+    <version>@VERSION@</version>
+    <title>SocketIoClientDotNet</title>
+    <authors>Matthias Ludwig</authors>
+    <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <dependencies>
+      <group>
+        <dependency id="Json.NET" version="6.0.5" />
+        <dependency id="EngineIoClientDotNet" version="0.9.5" />
+      </group>
+      <group targetFramework="net45">
+        <dependency id="WebSocket4Net" version="0.10" />
+      </group>
+      <group targetFramework="windowsphone8">
+        <dependency id="WebSocket4Net" version="0.10" />
+      </group>
+    </dependencies>
+    <projectUrl>https://github.com/Quobject/SocketIoClientDotNet/</projectUrl>
+    <description>This is the Socket.IO Client Library for C#.</description>
+    <summary>This library supports all of the features the JS client does, including events, options and upgrading transport. SocketIoClientDotNet has a similar api to those of the JavaScript client.</summary>
+    <tags>socket.io.client</tags>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Web" targetFramework="net45" />
+    </frameworkAssemblies>
+  </metadata>
+</package>
