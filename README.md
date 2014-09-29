@@ -30,6 +30,7 @@ socket.On(Socket.EVENT_CONNECT, () =>
 Console.ReadLine();
 ```
 
+More examples can be found in [unit tests](https://github.com/Quobject/SocketIoClientDotNet/blob/master/Src/SocketIoClientDotNet.Tests.net45/ClientTests/ServerConnectionTest.cs) acting against the [test server](https://github.com/Quobject/SocketIoClientDotNet/blob/master/TestServer/server.js).
 
 ## Features
 This library supports all of the features the JS client does, including events, options and upgrading transport.
