@@ -38,11 +38,13 @@ This library supports all of the features the JS client does, including events, 
 .Net Framework 4.5, Windows 8, Windows 8.1, Windows Phone 8, Windows Phone 8.1, Mono
 
 
-# Support me
+## Support me
 
 If you like this project you may support me by donating something, starring this repository or reporting bugs and ideas in the issue section.
 
+[![Donate PayPal](pics/donate-paypal.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=UDX488Y3Y4K36)
 [![Donate Bitcoins](pics/donate-bitcoins.png)](https://coinbase.com/checkouts/621810df8d49a896e170dd5d5bd28a73)
+[![Report issue](pics/issues.png)](https://github.com/Quobject/SocketIoClientDotNet/issues/new)
 
 
 ## License
