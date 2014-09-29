@@ -10,7 +10,7 @@ See also: [EngineIoClientDotNet](https://github.com/Quobject/EngineIoClientDotNe
 ## Installation
 Nuget install:
 ```
-Install-Package SocketIoClientDotNet
+[Install-Package SocketIoClientDotNet](https://www.nuget.org/packages/SocketIoClientDotNet/)
 ```
 
 ## Usage
