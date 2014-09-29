@@ -8,9 +8,9 @@ This is the Socket.IO v1.0 Client Library for C#, which is ported from the [Java
 See also: [EngineIoClientDotNet](https://github.com/Quobject/EngineIoClientDotNet)
 
 ## Installation
-Nuget install:
+[Nuget install](https://www.nuget.org/packages/SocketIoClientDotNet/):
 ```
-[Install-Package SocketIoClientDotNet](https://www.nuget.org/packages/SocketIoClientDotNet/)
+Install-Package SocketIoClientDotNet
 ```
 
 ## Usage
@@ -50,4 +50,4 @@ If you like this project you may support me by donating something, starring this
 
 ## License
 
-MIT
+[MIT](http://opensource.org/licenses/MIT)
