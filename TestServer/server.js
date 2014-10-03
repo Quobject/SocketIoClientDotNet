@@ -3,6 +3,7 @@
   express = require('express'),
   expect = require('expect.js'),
   config = require('./../grunt/config.json'),
+  test_data = require('./test_data.json'),
   app = express(),
   fs = require('fs'),
   options = {
@@ -37,9 +38,34 @@ app.get('/', function (req, res) {
 
 io.on('connection', function (socket) {
     // simple test
-    socket.on('hi', function () {
-        socket.emit('hi','more data');
+  socket.on('hi', function () {
+      console.log("hi");
+      socket.emit('hi','more data');
     });
+
+  socket.on('d10000chars', function () {
+    console.log('d10000chars');
+    socket.emit('d10000chars', test_data.d10000chars);
+  });
+
+
+  socket.on('d100000chars', function () {
+    console.log('d100000chars');
+    socket.emit('d100000chars', test_data.d100000chars);
+  });
+
+
+  socket.on('json10000chars', function () {
+    console.log('json10000chars');
+    socket.emit('json10000chars', { data: test_data.d10000chars });
+  });
+
+  socket.on('json10000000chars', function () {
+    console.log('json10000000chars');
+    socket.emit('json10000000chars', {
+      data: test_data.d10000000chars, data2: test_data.d100000chars, data3: test_data.d100000chars, data4: { data5: test_data.d100000chars }
+    });
+  });
 
     // ack tests
     socket.on('ack', function () {

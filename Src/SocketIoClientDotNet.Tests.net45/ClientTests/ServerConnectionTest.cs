@@ -84,7 +84,7 @@ namespace SocketIoClientDotNet.Tests.ClientTests
             ManualResetEvent.WaitOne();
             socket.Close();
             var obj = events.Dequeue();
-            Assert.Null(obj);
+            Assert.Equal("more data", obj);
         }
 
 
@@ -1000,6 +1000,138 @@ namespace SocketIoClientDotNet.Tests.ClientTests
             Assert.True(Flag);
         }
 
- 
+
+        [Fact]
+        public void D10000CharsTest()
+        {
+            var log = LogManager.GetLogger(Global.CallerName());
+            log.Info("Start");
+            ManualResetEvent = new ManualResetEvent(false);
+            var events = new Queue<object>();
+
+            var options = CreateOptions();
+            var uri = CreateUri();
+            socket = IO.Socket(uri, options);
+            socket.On(Socket.EVENT_CONNECT, () =>
+            {
+                log.Info("EVENT_CONNECT");
+                socket.Emit("d10000chars");
+            });
+
+            socket.On("d10000chars",
+                (data) =>
+                {
+                    log.Info("EVENT_MESSAGE data="+data);
+                    events.Enqueue(data);
+                    ManualResetEvent.Set();
+                });
+
+            //socket.Open();
+            ManualResetEvent.WaitOne();
+            socket.Close();
+            var obj = (string)events.Dequeue();
+            Assert.Equal(10000, obj.Length);
+        }
+
+
+        [Fact]
+        public void D100000CharsTest()
+        {
+            var log = LogManager.GetLogger(Global.CallerName());
+            log.Info("Start");
+            ManualResetEvent = new ManualResetEvent(false);
+            var events = new Queue<object>();
+
+            var options = CreateOptions();
+            var uri = CreateUri();
+            socket = IO.Socket(uri, options);
+            socket.On(Socket.EVENT_CONNECT, () =>
+            {
+                log.Info("EVENT_CONNECT");
+                socket.Emit("d100000chars");
+            });
+
+            socket.On("d100000chars",
+                (data) =>
+                {
+                    log.Info("EVENT_MESSAGE data=" + data);
+                    events.Enqueue(data);
+                    ManualResetEvent.Set();
+                });
+
+            //socket.Open();
+            ManualResetEvent.WaitOne();
+            socket.Close();
+            var obj = (string)events.Dequeue();
+            Assert.Equal(100000, obj.Length);
+        }
+
+        [Fact]
+        public void Json10000CharsTest()
+        {
+            var log = LogManager.GetLogger(Global.CallerName());
+            log.Info("Start");
+            ManualResetEvent = new ManualResetEvent(false);
+            var events = new Queue<object>();
+
+            var options = CreateOptions();
+            var uri = CreateUri();
+            socket = IO.Socket(uri, options);
+            socket.On(Socket.EVENT_CONNECT, () =>
+            {
+                log.Info("EVENT_CONNECT");
+                socket.Emit("json10000chars");
+            });
+
+            socket.On("json10000chars",
+                (data) =>
+                {
+                    log.Info("EVENT_MESSAGE data=" + data);
+                    events.Enqueue(data);
+                    ManualResetEvent.Set();
+                });
+
+            //socket.Open();
+            ManualResetEvent.WaitOne();
+            socket.Close();
+            var obj = (JObject)events.Dequeue();
+            var str = (string)obj["data"];
+            Assert.Equal(10000, str.Length);
+        }
+
+        [Fact]
+        public void Json10000000CharsTest()
+        {
+            var log = LogManager.GetLogger(Global.CallerName());
+            log.Info("Start");
+            ManualResetEvent = new ManualResetEvent(false);
+            var events = new Queue<object>();
+
+            var options = CreateOptions();
+            var uri = CreateUri();
+            socket = IO.Socket(uri, options);
+            socket.On(Socket.EVENT_CONNECT, () =>
+            {
+                log.Info("EVENT_CONNECT");
+                socket.Emit("json10000000chars");
+            });
+
+            socket.On("json10000000chars",
+                (data) =>
+                {
+                    log.Info("EVENT_MESSAGE data=" + data);
+                    events.Enqueue(data);
+                    ManualResetEvent.Set();
+                });
+
+            //socket.Open();
+            ManualResetEvent.WaitOne();
+            socket.Close();
+            var obj = (JObject)events.Dequeue();
+            var str = (string)obj["data"];
+            Assert.Equal(10000000, str.Length);
+        }
+
+
     }
 }
