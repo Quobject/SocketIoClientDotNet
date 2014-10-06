@@ -150,9 +150,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="EngineIoClientDotNet, Version=0.9.7.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="EngineIoClientDotNet, Version=0.9.8.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\SocketIoClientDotNet.netcore45\packages\EngineIoClientDotNet.0.9.7\lib\netcore45\EngineIoClientDotNet.dll</HintPath>
+      <HintPath>..\SocketIoClientDotNet.netcore45\packages\EngineIoClientDotNet.0.9.8\lib\netcore45\EngineIoClientDotNet.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\SocketIoClientDotNet.netcore45\packages\Newtonsoft.Json.6.0.5\lib\netcore45\Newtonsoft.Json.dll</HintPath>

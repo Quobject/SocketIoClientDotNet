@@ -6,6 +6,7 @@ module.exports = function (grunt) {
     util = require('util'),
     os = node_os.platform() === 'win32' ? 'win' : 'linux',
     nuget_builds = [
+      { "Name": "SocketIoClientDotNet.net35", "NuGetDir": "net35" },
       { "Name": "SocketIoClientDotNet.net45", "NuGetDir": "net45" },
       { "Name": "SocketIoClientDotNet.windowsphone8", "NuGetDir": "windowsphone8" },
       { "Name": "SocketIoClientDotNet.netcore45", "NuGetDir": "netcore45" },

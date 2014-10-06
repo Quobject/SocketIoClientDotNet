@@ -16,8 +16,8 @@
     if (os === 'win') {
 
       start = '{0} start-process ' +
-        //'-NoNewWindow ' + 
-        '-WindowStyle Normal ' + //-WindowStyle (Hidden | Normal) | -NoNewWindow
+        '-NoNewWindow ' + 
+        //'-WindowStyle Normal ' + //-WindowStyle (Hidden | Normal) | -NoNewWindow
         '-FilePath node ' +
         '-ArgumentList \' server.js \' ';
       start = string.format(start, config.win.powershell);

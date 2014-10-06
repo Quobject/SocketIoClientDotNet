@@ -112,9 +112,9 @@
     <Content Include="Assets\WideLogo.scale-240.png" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="EngineIoClientDotNet, Version=0.9.7.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="EngineIoClientDotNet, Version=0.9.8.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\SocketIoClientDotNet.portable-wpa81+wp81\packages\EngineIoClientDotNet.0.9.7\lib\portable-wpa81+wp81\EngineIoClientDotNet.dll</HintPath>
+      <HintPath>..\SocketIoClientDotNet.portable-wpa81+wp81\packages\EngineIoClientDotNet.0.9.8\lib\portable-wpa81+wp81\EngineIoClientDotNet.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\SocketIoClientDotNet.portable-wpa81+wp81\packages\Newtonsoft.Json.6.0.5\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
