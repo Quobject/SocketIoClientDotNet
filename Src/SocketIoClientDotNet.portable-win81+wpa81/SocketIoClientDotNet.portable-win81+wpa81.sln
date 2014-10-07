@@ -7,6 +7,27 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocketIoClientDotNet.portab
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocketIoClientDotNet.Tests.portable-wpa81+wp81.UnitTest", "..\SocketIoClientDotNet.Tests.portable-wpa81+wp81.UnitTest\SocketIoClientDotNet.Tests.portable-wpa81+wp81.UnitTest.csproj", "{B1598787-7C72-4BCD-A0D5-39DD90AC5F42}"
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "grunt", "http://localhost:26409", "{78CADA8C-D36D-4887-8E24-665058A9D81A}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_26409"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\grunt\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_26409\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_26409"
+		Release.AspNetCompiler.PhysicalPath = "..\..\grunt\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_26409\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "..\..\grunt\"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +84,20 @@ Global
 		{B1598787-7C72-4BCD-A0D5-39DD90AC5F42}.Release|x86.ActiveCfg = Release|x86
 		{B1598787-7C72-4BCD-A0D5-39DD90AC5F42}.Release|x86.Build.0 = Release|x86
 		{B1598787-7C72-4BCD-A0D5-39DD90AC5F42}.Release|x86.Deploy.0 = Release|x86
+		{78CADA8C-D36D-4887-8E24-665058A9D81A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78CADA8C-D36D-4887-8E24-665058A9D81A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78CADA8C-D36D-4887-8E24-665058A9D81A}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{78CADA8C-D36D-4887-8E24-665058A9D81A}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{78CADA8C-D36D-4887-8E24-665058A9D81A}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{78CADA8C-D36D-4887-8E24-665058A9D81A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{78CADA8C-D36D-4887-8E24-665058A9D81A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{78CADA8C-D36D-4887-8E24-665058A9D81A}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{78CADA8C-D36D-4887-8E24-665058A9D81A}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{78CADA8C-D36D-4887-8E24-665058A9D81A}.Release|ARM.ActiveCfg = Debug|Any CPU
+		{78CADA8C-D36D-4887-8E24-665058A9D81A}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{78CADA8C-D36D-4887-8E24-665058A9D81A}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
+		{78CADA8C-D36D-4887-8E24-665058A9D81A}.Release|x64.ActiveCfg = Debug|Any CPU
+		{78CADA8C-D36D-4887-8E24-665058A9D81A}.Release|x86.ActiveCfg = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
