@@ -10,7 +10,8 @@ module.exports = function (grunt) {
       { "Name": "SocketIoClientDotNet.net45", "NuGetDir": "net45" },
       { "Name": "SocketIoClientDotNet.windowsphone8", "NuGetDir": "windowsphone8" },
       { "Name": "SocketIoClientDotNet.netcore45", "NuGetDir": "netcore45" },
-      { "Name": "SocketIoClientDotNet.portable-wpa81+wp81", "NuGetDir": "portable-wpa81+wp81" }
+      { "Name": "SocketIoClientDotNet.portable-wpa81+wp81", "NuGetDir": "portable-wpa81+wp81" },
+      { "Name": "SocketIoClientDotNet.portable-win81+wpa81", "NuGetDir": "portable-win81+wpa81" }
     ];
 
   grunt.log.writeln(util.inspect(config));

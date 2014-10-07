@@ -87,7 +87,7 @@ namespace SocketIoClientDotNet.Tests.netcore45.UnitTestLibrary.ClientTests
             ManualResetEvent.WaitOne();
             socket.Close();
             var obj = events.Dequeue();
-            Assert.IsNull(obj);
+            Assert.AreEqual("more data", (string) obj);
         }
 
 
