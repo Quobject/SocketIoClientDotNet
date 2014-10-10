@@ -17,6 +17,8 @@ Install-Package SocketIoClientDotNet
 SocketIoClientDotNet has a similar api to those of the [JavaScript client](https://github.com/Automattic/socket.io-client).
 
 ```cs
+using Quobject.SocketIoClientDotNet.Client;
+
 var socket = IO.Socket("http://localhost");
 socket.On(Socket.EVENT_CONNECT, () =>
 {
