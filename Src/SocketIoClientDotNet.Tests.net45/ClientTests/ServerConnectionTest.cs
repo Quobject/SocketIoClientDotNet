@@ -30,8 +30,9 @@ namespace SocketIoClientDotNet.Tests.ClientTests
             log.Info("Start");
             ManualResetEvent = new ManualResetEvent(false);
 
-            var options = CreateOptions();
+            var options = CreateOptions();            
             var uri = CreateUri();
+
             socket = IO.Socket(uri, options);
             socket.On(Socket.EVENT_CONNECT, () =>
             {
