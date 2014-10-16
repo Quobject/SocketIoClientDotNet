@@ -1133,6 +1133,39 @@ namespace SocketIoClientDotNet.Tests.ClientTests
             Assert.Equal(10000000, str.Length);
         }
 
+        [Fact]
+        public void Cookie()
+        {
+            var log = LogManager.GetLogger(Global.CallerName());
+            log.Info("Start");
+            ManualResetEvent = new ManualResetEvent(false);
+            var events = new Queue<object>();
+
+            var options = CreateOptions();
+            var uri = CreateUri();
+            options.Cookies.Add("connect.sid","12345");
+            socket = IO.Socket(uri, options);
+            socket.On(Socket.EVENT_CONNECT, () =>
+            {
+                log.Info("EVENT_CONNECT");
+                socket.Emit("get_cookie");                
+            });
+
+            socket.On("got_cookie",
+                (data) =>
+                {
+                    log.Info("EVENT_MESSAGE data=" + data);
+                    events.Enqueue(data);
+                    ManualResetEvent.Set();
+                });
+
+            ManualResetEvent.WaitOne();
+            socket.Close();
+            var cookie = (string)events.Dequeue();
+
+            Assert.Equal("connect.sid=12345", cookie);
+        }
+
 
     }
 }

@@ -2,6 +2,7 @@
   ssl = true,
   express = require('express'),
   expect = require('expect.js'),
+  util = require('util'),
   config = require('./../grunt/config.json'),
   test_data = require('./test_data.json'),
   app = express(),
@@ -37,6 +38,10 @@ app.get('/', function (req, res) {
 });
 
 io.on('connection', function (socket) {
+  socket.emit('hi','more data');
+
+
+
     // simple test
   socket.on('hi', function () {
       console.log("hi");
@@ -65,6 +70,11 @@ io.on('connection', function (socket) {
     socket.emit('json10000000chars', {
       data: test_data.d10000000chars, data2: test_data.d100000chars, data3: test_data.d100000chars, data4: { data5: test_data.d100000chars }
     });
+  });
+
+  socket.on('get_cookie', function () {
+    console.log(util.inspect(socket.handshake.headers.cookie));
+    socket.emit('got_cookie', socket.handshake.headers.cookie);
   });
 
     // ack tests
