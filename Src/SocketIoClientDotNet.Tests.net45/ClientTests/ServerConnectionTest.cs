@@ -2,6 +2,7 @@
 using Quobject.Collections.Immutable;
 using Quobject.EngineIoClientDotNet.Client;
 using Quobject.EngineIoClientDotNet.Client.Transports;
+using Quobject.EngineIoClientDotNet.ComponentEmitter;
 using Quobject.EngineIoClientDotNet.Modules;
 using Quobject.EngineIoClientDotNet.Parser;
 using Quobject.SocketIoClientDotNet.Client;
@@ -135,6 +136,86 @@ namespace SocketIoClientDotNet.Tests.ClientTests
             socket.Close();
 
         }
+
+
+
+        public class Acks2ListenerImpl : IListener
+        {
+            private static int id_counter = 0;
+            private int Id;
+            private readonly Action<object,object> fn;
+
+            public Acks2ListenerImpl(Action<object,object> fn)
+            {
+
+                this.fn = fn;
+                this.Id = id_counter++;
+            }
+
+          
+
+            public void Call(params object[] args)
+            {
+                var arg1 = args.Length > 0 ? args[0] : null;
+                var arg2 = args.Length > 1 ? args[1] : null;
+
+                fn(arg1, arg2);
+            }
+
+
+            public int CompareTo(IListener other)
+            {
+                return this.GetId().CompareTo(other.GetId());
+            }
+
+            public int GetId()
+            {
+                return Id;
+            }
+        }
+
+
+
+
+        [Fact]
+        public void ShouldWorkWithAcks2()
+        {
+            var log = LogManager.GetLogger(Global.CallerName());
+            log.Info("Start");
+            ManualResetEvent = new ManualResetEvent(false);
+            string message = "";
+
+            var options = CreateOptions();
+            var uri = CreateUri();
+            socket = IO.Socket(uri, options);
+            socket.Emit("ack2");
+
+            var myIListenerImpl = new Acks2ListenerImpl((msg, cb) =>
+            {
+                message = (string)msg;
+                var obj = new JObject();
+                obj["b"] = true;
+                var iack = (IAck)cb;
+                iack.Call(5, obj);
+
+            });
+
+
+            socket.On("ack2", myIListenerImpl);
+
+            socket.On("got it",
+                (data) =>
+                {
+                    log.Info("got it");
+                    ManualResetEvent.Set();
+                });
+
+            ManualResetEvent.WaitOne();
+            Assert.Equal("hello there", message);
+            socket.Close();
+
+        }
+
 
         [Fact]
         public void ShouldReceiveDateWithAck()

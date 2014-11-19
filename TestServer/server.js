@@ -87,6 +87,15 @@ io.on('connection', function (socket) {
         });
     });
 
+    socket.on('ack2', function () {
+        socket.emit('ack2', 'hello there', function (a, b) {
+            console.log("emit ack2 b=" + JSON.stringify(b));
+            if (a === 5 && b.b === true) {
+                socket.emit('got it');
+            }
+        });
+    });
+
     socket.on('getAckDate', function (data, cb) {
         cb(new Date(),5);
     });
