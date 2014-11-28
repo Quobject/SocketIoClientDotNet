@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "express": "^4.8.5",
-    "socket.io": "^1.1.0",
+    "socket.io": "^1.2.1",
     "expect": "^0.1.1",
     "expect.js": "^0.3.1"
   }
