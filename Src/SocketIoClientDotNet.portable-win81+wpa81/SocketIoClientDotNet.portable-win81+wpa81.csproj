@@ -146,10 +146,10 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="EngineIoClientDotNet">
-      <HintPath>packages\EngineIoClientDotNet.0.9.11\lib\portable-win81+wpa81\EngineIoClientDotNet.dll</HintPath>
+      <HintPath>packages\EngineIoClientDotNet.0.9.13\lib\portable-win81+wpa81\EngineIoClientDotNet.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>packages\Newtonsoft.Json.6.0.5\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+      <HintPath>packages\Newtonsoft.Json.6.0.6\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -30,30 +30,29 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EngineIoClientDotNet, Version=0.9.7.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="EngineIoClientDotNet, Version=0.9.13.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\References\EngineIoClientDotNet.dll</HintPath>
+      <HintPath>..\SocketIoClientDotNet.mono\packages\EngineIoClientDotNet.0.9.13\lib\net45\EngineIoClientDotNet.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\References\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="Quobject.Collections.Immutable">
-      <HintPath>..\..\References\Quobject.Collections.Immutable.dll</HintPath>
+      <HintPath>..\SocketIoClientDotNet.mono\packages\Newtonsoft.Json.6.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="WebSocket4Net, Version=0.7.0.0, Culture=neutral, PublicKeyToken=eb4e154b696bf72a, processorArchitecture=MSIL">
+    <Reference Include="WebSocket4Net, Version=0.10.0.0, Culture=neutral, PublicKeyToken=eb4e154b696bf72a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\References\WebSocket4Net.dll</HintPath>
+      <HintPath>..\SocketIoClientDotNet.mono\packages\WebSocket4Net.0.10\lib\net45\WebSocket4Net.dll</HintPath>
     </Reference>
-    <Reference Include="xunit">
-      <HintPath>..\..\References\xunit.dll</HintPath>
+    <Reference Include="xunit, Version=1.9.2.1705, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\SocketIoClientDotNet.mono\packages\xunit.1.9.2\lib\net20\xunit.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -85,6 +84,9 @@
       <Project>{9c663463-8a1d-4960-a64a-1e0303034fe2}</Project>
       <Name>SocketIoClientDotNet.mono</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
