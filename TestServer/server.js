@@ -40,11 +40,14 @@ app.get('/', function (req, res) {
 io.on('connection', function (socket) {
   socket.emit('hi','more data');
 
-
+  socket.on('hi2', function (d) {
+      console.log("hi2" + d);
+      socket.emit('hi2back','more data');
+    });
 
     // simple test
-  socket.on('hi', function () {
-      console.log("hi");
+  socket.on('hi', function (d) {
+      console.log("hi" + d);
       socket.emit('hi','more data');
     });
 
