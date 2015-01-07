@@ -57,6 +57,6 @@ Thank you!
 List of donators:
  
 * Reinis Kopmanis - $20
-
+* Evan Reeves - $16
 
 
