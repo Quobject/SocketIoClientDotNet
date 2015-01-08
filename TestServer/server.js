@@ -121,7 +121,7 @@ io.on('connection', function (socket) {
         socket.emit('takeUtf8', 'てすと');
         socket.emit('takeUtf8', 'Я Б Г Д Ж Й');
         socket.emit('takeUtf8', 'Ä ä Ü ü ß');
-        socket.emit('takeUtf8', 'utf8 — string');
+        socket.emit('takeUtf8', '李O四');
         socket.emit('takeUtf8', 'utf8 — string');
     });
 
