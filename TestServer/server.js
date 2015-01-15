@@ -81,6 +81,17 @@ io.on('connection', function (socket) {
     });
   });
 
+
+  socket.on('latin', function(wsinput) {
+      console.log('issue24 socket.on latin');
+      socket.emit('latin', {'error' : 'Nombre de usuario o contraseña incorrecta.'});
+  });
+
+  socket.on('nolatin', function(wsinput) {
+      console.log('issue24 sockect.on no latin');
+      socket.emit('nolatin', {'error' : 'Nombre de usuario o contrasena incorrecta.'});
+  });
+
   socket.on('get_cookie', function () {
     console.log(util.inspect(socket.handshake.headers.cookie));
     socket.emit('got_cookie', socket.handshake.headers.cookie);
@@ -186,6 +197,20 @@ io.of('/asd').on('connection', function () {
 
 io_ssl.on('connection', function (socket) {
 
+});
 
+//issue #24
+var nsp = io.of('/W00002');
+nsp.on('connection', function(socket){
+    //socket.removeAllListeners();
 
+    socket.on('latin', function(wsinput) {
+        console.log('/W00002 sockect.on latin');
+        socket.emit('latin', {'error' : 'Nombre de usuario o contraseña incorrecta.'});
+    });
+
+    socket.on('nolatin', function(wsinput) {
+        console.log('/W00002 sockect.on no latin');
+        socket.emit('nolatin', {'error' : 'Nombre de usuario o contrasena incorrecta.'});
+    });
 });
