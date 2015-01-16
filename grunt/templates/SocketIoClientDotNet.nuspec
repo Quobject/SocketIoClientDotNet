@@ -9,28 +9,28 @@
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <dependencies>
       <group targetFramework="netcore45">
-        <dependency id="Newtonsoft.Json" version="6.0.6" />
-        <dependency id="EngineIoClientDotNet" version="0.9.14" />
+        <dependency id="Newtonsoft.Json" version="6.0.8" />
+        <dependency id="EngineIoClientDotNet" version="0.9.15" />
       </group>
       <group targetFramework="portable-wpa81+wp81">
-        <dependency id="Newtonsoft.Json" version="6.0.6" />
-        <dependency id="EngineIoClientDotNet" version="0.9.14" />
+        <dependency id="Newtonsoft.Json" version="6.0.8" />
+        <dependency id="EngineIoClientDotNet" version="0.9.15" />
       </group>
       <group targetFramework="net35">
-        <dependency id="WebSocket4Net" version="0.10" />
-        <dependency id="Newtonsoft.Json" version="6.0.6" />
-        <dependency id="System.Threading.Tasks" version="3.0.2" />
-        <dependency id="EngineIoClientDotNet" version="0.9.14" />
+        <dependency id="WebSocket4Net" version="0.11" />
+        <dependency id="Newtonsoft.Json" version="6.0.8" />
+        <dependency id="System.Threading.Tasks" version="3.1.1" />
+        <dependency id="EngineIoClientDotNet" version="0.9.15" />
       </group>
       <group targetFramework="net45">
-        <dependency id="WebSocket4Net" version="0.10" />
-        <dependency id="Newtonsoft.Json" version="6.0.6" />
-        <dependency id="EngineIoClientDotNet" version="0.9.14" />
+        <dependency id="WebSocket4Net" version="0.11" />
+        <dependency id="Newtonsoft.Json" version="6.0.8" />
+        <dependency id="EngineIoClientDotNet" version="0.9.15" />
       </group>
       <group targetFramework="windowsphone8">
-        <dependency id="WebSocket4Net" version="0.10" />
-        <dependency id="Newtonsoft.Json" version="6.0.6" />
-        <dependency id="EngineIoClientDotNet" version="0.9.14" />
+        <dependency id="WebSocket4Net" version="0.11" />
+        <dependency id="Newtonsoft.Json" version="6.0.8" />
+        <dependency id="EngineIoClientDotNet" version="0.9.15" />
       </group>
     </dependencies>
     <projectUrl>https://github.com/Quobject/SocketIoClientDotNet/</projectUrl>

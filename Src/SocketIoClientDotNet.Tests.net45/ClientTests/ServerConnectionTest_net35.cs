@@ -237,7 +237,7 @@ namespace SocketIoClientDotNet.Tests.ClientTests
                 "てすと",
                 "Я Б Г Д Ж Й",
                 "Ä ä Ü ü ß",
-                "utf8 — string",
+                "李O四",
                 "utf8 — string"
             };
             var i = 0;

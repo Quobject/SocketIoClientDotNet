@@ -30,13 +30,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EngineIoClientDotNet, Version=0.9.14.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="EngineIoClientDotNet, Version=0.9.15.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\SocketIoClientDotNet.net45\packages\EngineIoClientDotNet.0.9.14\lib\net45\EngineIoClientDotNet.dll</HintPath>
+      <HintPath>..\SocketIoClientDotNet.net45\packages\EngineIoClientDotNet.0.9.15\lib\net45\EngineIoClientDotNet.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\SocketIoClientDotNet.net45\packages\Newtonsoft.Json.6.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\SocketIoClientDotNet.net45\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,9 +46,9 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="WebSocket4Net, Version=0.10.0.0, Culture=neutral, PublicKeyToken=eb4e154b696bf72a, processorArchitecture=MSIL">
+    <Reference Include="WebSocket4Net, Version=0.11.0.0, Culture=neutral, PublicKeyToken=eb4e154b696bf72a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\SocketIoClientDotNet.net45\packages\WebSocket4Net.0.10\lib\net45\WebSocket4Net.dll</HintPath>
+      <HintPath>..\SocketIoClientDotNet.net45\packages\WebSocket4Net.0.11\lib\net45\WebSocket4Net.dll</HintPath>
     </Reference>
     <Reference Include="xunit">
       <HintPath>..\SocketIoClientDotNet.net45\packages\xunit.1.9.2\lib\net20\xunit.dll</HintPath>
@@ -65,6 +65,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

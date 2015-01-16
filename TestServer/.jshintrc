@@ -1,0 +1,16 @@
+{
+  "node": true,
+  "devel": true,
+  "indent": 2,
+  "maxerr": 50,
+  "newcap": true,
+  "nomen": true,
+  "plusplus": false,
+  "regexp": true,
+  "white": false,
+  "curly": true,
+  "eqnull": true,
+  "eqeqeq": true,
+  "undef": true
+  
+}

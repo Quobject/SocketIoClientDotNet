@@ -8,9 +8,9 @@
   app = express(),
   fs = require('fs'),
   options = {
-      key: fs.readFileSync(__dirname + '/testme.quobject.com.key'),
-      cert: fs.readFileSync(__dirname + '/testme.quobject.com.cert'),
-      requestCert: true
+    key: fs.readFileSync(__dirname + '/testme.quobject.com.key'),
+    cert: fs.readFileSync(__dirname + '/testme.quobject.com.cert'),
+    requestCert: true
   },
   io,
   io_ssl,
@@ -23,159 +23,164 @@ console.log("https port = " + config.server.ssl_port);
 https = require('https').createServer(options, app);
 io_ssl = require('socket.io')(https, { pingInterval: 500 });
 https.listen(config.server.ssl_port, function (d) {
-    console.log('socket.io server listening on port', config.server.ssl_port);
+  console.log('socket.io server listening on port', config.server.ssl_port);
 });
 
 console.log("http port = " + config.server.port);
 http = require('http').createServer(app);
 io = require('socket.io')(http, { pingInterval: 500 });
 http.listen(config.server.port, function () {
-    console.log('socket.io server listening on port', config.server.port);
+  console.log('socket.io server listening on port', config.server.port);
 });
 
 app.get('/', function (req, res) {
-    res.sendfile('index.html');
+  res.sendfile('index.html');
 });
 
-io.on('connection', function (socket) {
-  socket.emit('hi','more data');
+io.on('connection', function(socket) {
+  socket.emit('hi', 'more data');
 
-  socket.on('hi2', function (d) {
-      console.log("hi2" + d);
-      socket.emit('hi2back','more data');
-    });
-
-    // simple test
-  socket.on('hi', function (d) {
-      console.log("hi" + d);
-      socket.emit('hi','more data');
-    });
-
- //ogs test
-  socket.on('parser_error#21', function (d) {
-      console.log("ogs test" + d);
-      socket.emit('parser_error#21_response', test_data.ogstestchars);
+  socket.on('hi2', function(d) {
+    console.log("hi2" + d);
+    socket.emit('hi2back', 'more data');
   });
 
-  socket.on('d10000chars', function () {
+  // simple test
+  socket.on('hi', function(d) {
+    console.log("hi" + d);
+    socket.emit('hi', 'more data');
+  });
+
+  //ogs test
+  socket.on('parser_error#21', function(d) {
+    console.log("ogs test" + d);
+    socket.emit('parser_error#21_response', test_data.ogstestchars);
+  });
+
+  socket.on('d10000chars', function() {
     console.log('d10000chars');
     socket.emit('d10000chars', test_data.d10000chars);
   });
 
 
-  socket.on('d100000chars', function () {
+  socket.on('d100000chars', function() {
     console.log('d100000chars');
     socket.emit('d100000chars', test_data.d100000chars);
   });
 
 
-  socket.on('json10000chars', function () {
+  socket.on('json10000chars', function() {
     console.log('json10000chars');
     socket.emit('json10000chars', { data: test_data.d10000chars });
   });
 
-  socket.on('json10000000chars', function () {
+  socket.on('json10000000chars', function() {
     console.log('json10000000chars');
     socket.emit('json10000000chars', {
-      data: test_data.d10000000chars, data2: test_data.d100000chars, data3: test_data.d100000chars, data4: { data5: test_data.d100000chars }
+      data: test_data.d10000000chars,
+      data2: test_data.d100000chars,
+      data3: test_data.d100000chars,
+      data4: { data5: test_data.d100000chars }
     });
   });
 
 
   socket.on('latin', function(wsinput) {
-      console.log('issue24 socket.on latin');
-      socket.emit('latin', {'error' : 'Nombre de usuario o contraseña incorrecta.'});
+    console.log('issue24 socket.on latin');
+    socket.emit('latin', { 'error': 'Nombre de usuario o contraseña incorrecta.' });
   });
 
   socket.on('nolatin', function(wsinput) {
-      console.log('issue24 sockect.on no latin');
-      socket.emit('nolatin', {'error' : 'Nombre de usuario o contrasena incorrecta.'});
+    console.log('issue24 sockect.on no latin');
+    socket.emit('nolatin', { 'error': 'Nombre de usuario o contrasena incorrecta.' });
   });
 
-  socket.on('get_cookie', function () {
+  socket.on('get_cookie', function() {
     console.log(util.inspect(socket.handshake.headers.cookie));
     socket.emit('got_cookie', socket.handshake.headers.cookie);
   });
 
-    // ack tests
-    socket.on('ack', function () {
-        socket.emit('ack', function (a, b) {
-            console.log("emit ack b=" + JSON.stringify(b));
-            if (a === 5 && b.b === true) {
-                socket.emit('got it');
-            }
-        });
+  // ack tests
+  socket.on('ack', function() {
+    socket.emit('ack', function(a, b) {
+      console.log("emit ack b=" + JSON.stringify(b));
+      if (a === 5 && b.b === true) {
+        socket.emit('got it');
+      }
     });
+  });
 
-    socket.on('ack2', function () {
-        socket.emit('ack2', 'hello there', function (a, b) {
-            console.log("emit ack2 b=" + JSON.stringify(b));
-            if (a === 5 && b.b === true) {
-                socket.emit('got it');
-            }
-        });
+  socket.on('ack2', function() {
+    socket.emit('ack2', 'hello there', function(a, b) {
+      console.log("emit ack2 b=" + JSON.stringify(b));
+      if (a === 5 && b.b === true) {
+        socket.emit('got it');
+      }
     });
+  });
 
-    socket.on('getAckDate', function (data, cb) {
-        cb(new Date(),5);
-    });
+  socket.on('getAckDate', function(data, cb) {
+    cb(new Date(), 5);
+  });
 
-    socket.on('getDate', function () {
-        socket.emit('takeDate', new Date());
-    });
+  socket.on('getDate', function() {
+    socket.emit('takeDate', new Date());
+  });
 
-    socket.on('getDateObj', function () {
-        socket.emit('takeDateObj', { date: new Date() });
-    });
+  socket.on('getDateObj', function() {
+    socket.emit('takeDateObj', { date: new Date() });
+  });
 
-    socket.on('getUtf8', function () {
-        socket.emit('takeUtf8', 'てすと');
-        socket.emit('takeUtf8', 'Я Б Г Д Ж Й');
-        socket.emit('takeUtf8', 'Ä ä Ü ü ß');
-        socket.emit('takeUtf8', '李O四');
-        socket.emit('takeUtf8', 'utf8 — string');
-    });
+  socket.on('getUtf8', function() {
+    socket.emit('takeUtf8', 'てすと');
+    socket.emit('takeUtf8', 'Я Б Г Д Ж Й');
+    socket.emit('takeUtf8', 'Ä ä Ü ü ß');
+    socket.emit('takeUtf8', '李O四');
+    socket.emit('takeUtf8', 'utf8 — string');
+  });
 
-    // false test
-    socket.on('false', function () {
-        socket.emit('false', false);
-    });
+  // false test
+  socket.on('false', function() {
+    socket.emit('false', false);
+  });
 
-    // binary test
-    socket.on('doge', function () {
-        var buf = new Buffer('asdfasdf', 'utf8');
-        socket.emit('doge', buf);
-    });
+  // binary test
+  socket.on('doge', function() {
+    var buf = new Buffer('asdfasdf', 'utf8');
+    socket.emit('doge', buf);
+  });
 
-    // expect receiving binary to be buffer
-    socket.on('buffa', function (a) {
-        if (Buffer.isBuffer(a)) socket.emit('buffack');
-    });
+  // expect receiving binary to be buffer
+  socket.on('buffa', function(a) {
+    if (Buffer.isBuffer(a)) {
+      socket.emit('buffack');
+    }
+  });
 
-    // expect receiving binary with mixed JSON
-    socket.on('jsonbuff', function (a) {
-        expect(a.hello).to.eql('lol');
-        expect(Buffer.isBuffer(a.message)).to.be(true);
-        expect(a.goodbye).to.eql('gotcha');
-        socket.emit('jsonbuff-ack');
-    });
+  // expect receiving binary with mixed JSON
+  socket.on('jsonbuff', function(a) {
+    expect(a.hello).to.eql('lol');
+    expect(Buffer.isBuffer(a.message)).to.be(true);
+    expect(a.goodbye).to.eql('gotcha');
+    socket.emit('jsonbuff-ack');
+  });
 
-    // expect receiving buffers in order
-    var receivedAbuff1 = false;
-    socket.on('abuff1', function (a) {
-        expect(Buffer.isBuffer(a)).to.be(true);
-        receivedAbuff1 = true;
-    });
-    socket.on('abuff2', function (a) {
-        expect(receivedAbuff1).to.be(true);
-        socket.emit('abuff2-ack');
-    });
+  // expect receiving buffers in order
+  var receivedAbuff1 = false;
+  socket.on('abuff1', function(a) {
+    expect(Buffer.isBuffer(a)).to.be(true);
+    receivedAbuff1 = true;
+  });
+  socket.on('abuff2', function(a) {
+    expect(receivedAbuff1).to.be(true);
+    socket.emit('abuff2-ack');
+  });
 
-    // emit buffer to base64 receiving browsers
-    socket.on('getbin', function () {
-        buf = new Buffer('asdfasdf', 'utf8');
-        socket.emit('takebin', buf);
-    });
+  // emit buffer to base64 receiving browsers
+  socket.on('getbin', function() {
+    var buf = new Buffer('asdfasdf', 'utf8');
+    socket.emit('takebin', buf);
+  });
 
 });
 
@@ -199,18 +204,3 @@ io_ssl.on('connection', function (socket) {
 
 });
 
-//issue #24
-var nsp = io.of('/W00002');
-nsp.on('connection', function(socket){
-    //socket.removeAllListeners();
-
-    socket.on('latin', function(wsinput) {
-        console.log('/W00002 sockect.on latin');
-        socket.emit('latin', {'error' : 'Nombre de usuario o contraseña incorrecta.'});
-    });
-
-    socket.on('nolatin', function(wsinput) {
-        console.log('/W00002 sockect.on no latin');
-        socket.emit('nolatin', {'error' : 'Nombre de usuario o contrasena incorrecta.'});
-    });
-});

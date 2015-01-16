@@ -1284,68 +1284,7 @@ namespace SocketIoClientDotNet.Tests.ClientTests
         }
 
 
-        [Fact]
-        public void Issue_24()
-        {
-            LogManager.Enabled = true;
-            var log = LogManager.GetLogger(Global.CallerName());
-            log.Info("Start");
-            ManualResetEvent = new ManualResetEvent(false);
-            var events = new Queue<object>();
-
-            var options = CreateOptions();
-            var uri = CreateUri();
-            socket = IO.Socket(uri, options);
-
-
-
-            socket.On(Socket.EVENT_CONNECT, (data) =>
-            {
-                //Console.WriteLine("Connected!");
-                log.Info("Connected!");
-
-                socket.Emit("latin", "");
-                socket.Emit("latin", "");
-                socket.Emit("latin", "");
-                socket.Emit("latin", "");
-                socket.Emit("latin", "");
-                System.Threading.Thread.Sleep(1000);
-
-                socket.Emit("nolatin", "");
-                socket.Emit("nolatin", "");
-                socket.Emit("nolatin", "");
-                socket.Emit("nolatin", "");
-                socket.Emit("nolatin", "");
-                System.Threading.Thread.Sleep(1000); //removing this line decreaces the chances of failing
-            });
-
-            socket.On(Socket.EVENT_ERROR, (data) =>
-            {
-                //Console.WriteLine("Error: " + data);
-                log.Info("Error: " + data);
-            });
-
-            socket.On("latin", (data) =>
-            {
-                //Console.WriteLine("latin: " + data);
-                log.Info("latin: " + data);
-            });
-
-            socket.On("nolatin", (data) =>
-            {
-                //Console.WriteLine("nolatin: " + data);
-                log.Info("nolatin: " + data);
-            });
-
-
-
-
-            ManualResetEvent.WaitOne();
-            socket.Close();
-            var cookie = (string)events.Dequeue();
-
-            //Assert.Equal("connect.sid=12345", cookie);
-        }
+   
 
 
     }
