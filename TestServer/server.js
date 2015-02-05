@@ -5,6 +5,7 @@
   util = require('util'),
   config = require('./../grunt/config.json'),
   test_data = require('./test_data.json'),
+  utf8 = require('utf8'),
   app = express(),
   fs = require('fs'),
   options = {
@@ -40,7 +41,8 @@ app.get('/', function (req, res) {
 io.on('connection', function(socket) {
   socket.emit('hi', 'more data');
 
-  socket.on('hi2', function(d) {
+  socket.on('hi2', function(d) {   
+
     console.log("hi2" + d);
     socket.emit('hi2back', 'more data');
   });
@@ -183,8 +185,10 @@ io.on('connection', function(socket) {
   });
 
   // simple test
-  socket.on('test', function(d) {
-    console.log("hi" + d);
+  socket.on('test', function(d) {    
+    var s1 = "test" + d;
+    console.log(s1);
+    fs.appendFileSync('test.txt', s1);
     socket.emit('hi', 'more data');
   });
 

@@ -19,6 +19,7 @@
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-copy": "^0.5.0",
     "rimraf": "^2.2.8",
-    "express": "^4.9.0"
+    "express": "^4.9.0",
+    "utf8": "^2.1.0"
   }
 }
