@@ -182,6 +182,12 @@ io.on('connection', function(socket) {
     socket.emit('takebin', buf);
   });
 
+  // simple test
+  socket.on('test', function(d) {
+    console.log("hi" + d);
+    socket.emit('hi', 'more data');
+  });
+
 });
 
 io.of('/foo').on('connection', function () {

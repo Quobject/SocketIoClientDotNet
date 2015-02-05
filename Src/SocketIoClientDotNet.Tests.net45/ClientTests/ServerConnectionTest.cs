@@ -1284,7 +1284,42 @@ namespace SocketIoClientDotNet.Tests.ClientTests
         }
 
 
-   
+        [Fact]
+        public void MessageTestHebrew()
+        {
+            var log = LogManager.GetLogger(Global.CallerName());
+            log.Info("Start");
+            ManualResetEvent = new ManualResetEvent(false);
+            var events = new Queue<object>();
+
+            var options = CreateOptions();
+
+
+            options.Transports = ImmutableList.Create<string>(Polling.NAME);
+
+            var uri = CreateUri();
+            socket = IO.Socket(uri, options);
+            socket.On(Socket.EVENT_CONNECT, () =>
+            {
+                log.Info("EVENT_CONNECT");
+                socket.Emit("test", "csdataてすとבדיקה");
+            });
+
+            socket.On("hi",
+                (data) =>
+                {
+                    log.Info("EVENT_MESSAGE");
+                    events.Enqueue(data);
+                    //socket.Emit("test", "2csdataてすとבדיקה");
+                    ManualResetEvent.Set();
+                });
+
+            //socket.Open();
+            ManualResetEvent.WaitOne();
+            socket.Close();
+            var obj = events.Dequeue();
+            Assert.Equal("more data", obj);
+        }
 
 
     }
