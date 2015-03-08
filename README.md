@@ -25,12 +25,14 @@ var socket = IO.Socket("http://localhost");
 socket.On(Socket.EVENT_CONNECT, () =>
 {
 	socket.Emit("hi");
-	socket.On("hi", (data) =>
+	
+});
+
+socket.On("hi", (data) =>
 	{
 		Console.WriteLine(data);
 		socket.Disconnect();
 	});
-});
 Console.ReadLine();
 ```
 
