@@ -9,7 +9,7 @@
       tasks = [],
       configuration = grunt.config('msbuild_configuration'),
       test_format_str = os === 'win' ?
-        '{0}/xunit.console.clr4.exe {1} /nunit test.xml' :
+        '{0}/xunit.console.exe {1} -nunit test.xml -parallel none' :
         'mono {0}/xunit.console.clr4.exe {1}',
 
       xunit_path = os === 'win' ?
