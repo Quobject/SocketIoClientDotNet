@@ -1,13 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocketIoClientDotNet.windowsphone8", "SocketIoClientDotNet.windowsphone8.csproj", "{E77BDDB4-13A0-43B4-A99D-09FA80A2B3A8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocketIoClientDotNet.Tests.windowsphone8.TestApp", "..\SocketIoClientDotNet.Tests.windowsphone8.TestApp\SocketIoClientDotNet.Tests.windowsphone8.TestApp.csproj", "{46696C05-F40D-4EEE-9E55-77AD573A685A}"
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "grunt", "..\..\grunt\", "{78CADA8C-D36D-4887-8E24-665058A9D81A}"
 	ProjectSection(WebsiteProperties) = preProject
-		Frontpage = "false"
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
 		Debug.AspNetCompiler.VirtualPath = "/grunt"
 		Debug.AspNetCompiler.PhysicalPath = "..\..\grunt\"
