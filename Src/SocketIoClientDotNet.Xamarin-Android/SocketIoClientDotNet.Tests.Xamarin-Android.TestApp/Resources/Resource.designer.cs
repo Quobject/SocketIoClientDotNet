@@ -9,9 +9,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Android.Runtime.ResourceDesignerAttribute("SocketIoClientDotNet.Tests.XamarinAndroid.TestApp.Resource", IsApplication=true)]
+[assembly: global::Android.Runtime.ResourceDesignerAttribute("SocketIoClientDotNet.Tests.XamarinAndroid.Resource", IsApplication=true)]
 
-namespace SocketIoClientDotNet.Tests.XamarinAndroid.TestApp
+namespace SocketIoClientDotNet.Tests.XamarinAndroid
 {
 	
 	
@@ -26,6 +26,8 @@ namespace SocketIoClientDotNet.Tests.XamarinAndroid.TestApp
 		
 		public static void UpdateIdValues()
 		{
+			global::Xamarin.Forms.Platform.Resource.String.ApplicationName = global::SocketIoClientDotNet.Tests.XamarinAndroid.Resource.String.ApplicationName;
+			global::Xamarin.Forms.Platform.Resource.String.Hello = global::SocketIoClientDotNet.Tests.XamarinAndroid.Resource.String.Hello;
 		}
 		
 		public partial class Attribute
@@ -53,6 +55,25 @@ namespace SocketIoClientDotNet.Tests.XamarinAndroid.TestApp
 			}
 			
 			private Drawable()
+			{
+			}
+		}
+		
+		public partial class String
+		{
+			
+			// aapt resource value: 0x7f030001
+			public const int ApplicationName = 2130903041;
+			
+			// aapt resource value: 0x7f030000
+			public const int Hello = 2130903040;
+			
+			static String()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private String()
 			{
 			}
 		}

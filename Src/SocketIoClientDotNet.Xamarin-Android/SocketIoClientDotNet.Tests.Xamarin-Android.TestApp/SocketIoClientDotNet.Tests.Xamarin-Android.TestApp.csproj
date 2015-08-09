@@ -6,15 +6,16 @@
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <ProjectGuid>{4A0DAB5D-5A84-49E2-AD98-443D1A656C45}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>SocketIoClientDotNet.Tests.XamarinAndroid.TestApp</RootNamespace>
+    <RootNamespace>SocketIoClientDotNet.Tests.XamarinAndroid</RootNamespace>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
+    <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
     <AssemblyName>SocketIoClientDotNet.Tests.Xamarin-Android.TestApp</AssemblyName>
     <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -78,6 +79,15 @@
     <Reference Include="Xamarin.Forms.Xaml">
       <HintPath>..\packages\Xamarin.Forms.1.4.4.6392\lib\MonoAndroid10\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
+    <Reference Include="xunit.execution.MonoAndroid">
+      <HintPath>..\packages\xunit.extensibility.execution.2.0.0\lib\monoandroid\xunit.execution.MonoAndroid.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.runner.utility.MonoAndroid">
+      <HintPath>..\packages\xunit.runner.utility.2.0.0\lib\monoandroid\xunit.runner.utility.MonoAndroid.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.runner.devices">
+      <HintPath>..\packages\xunit.runner.devices.1.0.0\lib\MonoAndroid\xunit.runner.devices.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
@@ -91,10 +101,13 @@
     <Compile Include="..\..\SocketIoClientDotNet.Tests.net45\ParserTests\ParserTest.cs">
       <Link>ParserTests\ParserTest.cs</Link>
     </Compile>
+    <Compile Include="MainActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
     <None Include="packages.config" />
+    <None Include="Properties\AndroidManifest.xml" />
+    <None Include="MainActivity.cs.txt" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-hdpi\Icon.png" />
@@ -106,6 +119,7 @@
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <Import Project="..\packages\xunit.core.2.0.0\build\monoandroid\xunit.core.props" Condition="Exists('..\packages\xunit.core.2.0.0\build\monoandroid\xunit.core.props')" />
   <Import Project="..\packages\Xamarin.Forms.1.4.4.6392\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.4.4.6392\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
+  <Import Project="..\packages\xunit.runner.devices.1.0.0\build\MonoAndroid\xunit.runner.devices.targets" Condition="Exists('..\packages\xunit.runner.devices.1.0.0\build\MonoAndroid\xunit.runner.devices.targets')" />
   <ItemGroup>
     <Folder Include="ParserTests\" />
     <Folder Include="ClientTests\" />
