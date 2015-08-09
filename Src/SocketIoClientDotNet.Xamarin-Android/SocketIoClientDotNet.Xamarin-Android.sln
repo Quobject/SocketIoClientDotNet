@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocketIoClientDotNet.Xamarin-Android", "SocketIoClientDotNet.Xamarin-Android\SocketIoClientDotNet.Xamarin-Android.csproj", "{3571B0FE-E760-4BCD-B853-0FEBFBE945A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocketIoClientDotNet.Tests.Xamarin-Android.TestApp", "SocketIoClientDotNet.Tests.Xamarin-Android.TestApp\SocketIoClientDotNet.Tests.Xamarin-Android.TestApp.csproj", "{4A0DAB5D-5A84-49E2-AD98-443D1A656C45}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocketIoClientDotNet.Tests.Xamarin-Android.TestApp", "..\SocketIoClientDotNet.Tests.Xamarin-Android.TestApp\SocketIoClientDotNet.Tests.Xamarin-Android.TestApp.csproj", "{4A0DAB5D-5A84-49E2-AD98-443D1A656C45}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

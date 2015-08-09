@@ -3,7 +3,7 @@
   "server":{  
     "port":80,
     "ssl_port":443,
-    "hostname":"testme.quobject.com"
+    "hostname":"127.0.0.1"
   },
   "win":{  
     "powershell":"C:/WINDOWS/System32/WindowsPowerShell/v1.0/powershell.exe",

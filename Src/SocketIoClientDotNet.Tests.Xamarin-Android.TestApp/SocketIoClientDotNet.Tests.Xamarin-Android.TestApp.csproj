@@ -92,16 +92,28 @@
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="..\..\SocketIoClientDotNet.Tests.net45\ParserTests\ByteArrayTest.cs">
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="..\SocketIoClientDotNet.Tests.net45\ParserTests\ByteArrayTest.cs">
       <Link>ParserTests\ByteArrayTest.cs</Link>
     </Compile>
-    <Compile Include="..\..\SocketIoClientDotNet.Tests.net45\ParserTests\Helpers.cs">
+    <Compile Include="..\SocketIoClientDotNet.Tests.net45\ParserTests\Helpers.cs">
       <Link>ParserTests\Helpers.cs</Link>
     </Compile>
-    <Compile Include="..\..\SocketIoClientDotNet.Tests.net45\ParserTests\ParserTest.cs">
+    <Compile Include="..\SocketIoClientDotNet.Tests.net45\ParserTests\ParserTest.cs">
       <Link>ParserTests\ParserTest.cs</Link>
     </Compile>
-    <Compile Include="MainActivity.cs" />
+    <Compile Include="..\SocketIoClientDotNet.Tests.net45\ModuleTests\HasBinaryDataTest.cs">
+      <Link>ModuleTests\HasBinaryDataTest.cs</Link>
+    </Compile>
+    <Compile Include="..\SocketIoClientDotNet.Tests.net45\ClientTests\ServerConnectionTest.cs">
+      <Link>ClientTests\ServerConnectionTest.cs</Link>
+    </Compile>
+    <Compile Include="..\SocketIoClientDotNet.Tests.net45\ClientTests\UrlTest.cs">
+      <Link>ClientTests\UrlTest.cs</Link>
+    </Compile>
+    <Compile Include="..\SocketIoClientDotNet.Tests.net45\ClientTests\Connection_device.cs">
+      <Link>ClientTests\Connection_device.cs</Link>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -126,7 +138,7 @@
     <Folder Include="ModuleTests\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SocketIoClientDotNet.Xamarin-Android\SocketIoClientDotNet.Xamarin-Android.csproj">
+    <ProjectReference Include="..\SocketIoClientDotNet.Xamarin-Android\SocketIoClientDotNet.Xamarin-Android\SocketIoClientDotNet.Xamarin-Android.csproj">
       <Project>{3571B0FE-E760-4BCD-B853-0FEBFBE945A4}</Project>
       <Name>SocketIoClientDotNet.Xamarin-Android</Name>
     </ProjectReference>
