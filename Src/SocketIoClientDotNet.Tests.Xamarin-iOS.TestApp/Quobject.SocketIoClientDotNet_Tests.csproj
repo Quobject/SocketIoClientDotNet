@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{0B25CB88-CEBB-49FA-9334-DE6DC271249A}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>SocketIoClientDotNet</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>SocketIoClientDotNet.Tests.Xamarin-iOS.TestApp</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>i386</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>i386</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="WebSocket4Net">
+      <HintPath>..\SocketIoClientDotNet.Xamarin-iOS\packages\WebSocket4Net.0.13.1\lib\Xamarin.iOS10\WebSocket4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\SocketIoClientDotNet.Xamarin-iOS\packages\Newtonsoft.Json.7.0.1\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="EngineIoClientDotNet">
+      <HintPath>..\SocketIoClientDotNet.Xamarin-iOS\packages\EngineIoClientDotNet.0.9.21\lib\xamarinios10\EngineIoClientDotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.abstractions">
+      <HintPath>..\SocketIoClientDotNet.Xamarin-iOS\packages\xunit.abstractions.2.0.0\lib\portable-net45+win+wpa81+wp80+monotouch+monoandroid+Xamarin.iOS\xunit.abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.core">
+      <HintPath>..\SocketIoClientDotNet.Xamarin-iOS\packages\xunit.extensibility.core.2.0.0\lib\portable-net45+win+wpa81+wp80+monotouch+monoandroid+Xamarin.iOS\xunit.core.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.assert">
+      <HintPath>..\SocketIoClientDotNet.Xamarin-iOS\packages\xunit.assert.2.0.0\lib\portable-net45+win+wpa81+wp80+monotouch+monoandroid+Xamarin.iOS\xunit.assert.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.execution.iOS-Universal">
+      <HintPath>..\SocketIoClientDotNet.Xamarin-iOS\packages\xunit.extensibility.execution.2.0.0\lib\Xamarin.iOS\xunit.execution.iOS-Universal.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.runner.utility.iOS-Universal">
+      <HintPath>..\SocketIoClientDotNet.Xamarin-iOS\packages\xunit.runner.utility.2.0.0\lib\Xamarin.iOS\xunit.runner.utility.iOS-Universal.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform.iOS">
+      <HintPath>..\SocketIoClientDotNet.Xamarin-iOS\packages\Xamarin.Forms.1.4.0.6341\lib\Xamarin.iOS10\Xamarin.Forms.Platform.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core">
+      <HintPath>..\SocketIoClientDotNet.Xamarin-iOS\packages\Xamarin.Forms.1.4.0.6341\lib\Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml">
+      <HintPath>..\SocketIoClientDotNet.Xamarin-iOS\packages\Xamarin.Forms.1.4.0.6341\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.runner.devices">
+      <HintPath>..\SocketIoClientDotNet.Xamarin-iOS\packages\xunit.runner.devices.1.0.0\lib\Xamarin.iOS\xunit.runner.devices.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="ClientTests\" />
+    <Folder Include="ModuleTests\" />
+    <Folder Include="ParserTests\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
+    <None Include="AppDelegate.cs.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="..\SocketIoClientDotNet.Tests.net45\ClientTests\Connection_device.cs">
+      <Link>ClientTests\Connection_device.cs</Link>
+    </Compile>
+    <Compile Include="..\SocketIoClientDotNet.Tests.net45\ClientTests\ServerConnectionTest.cs">
+      <Link>ClientTests\ServerConnectionTest.cs</Link>
+    </Compile>
+    <Compile Include="..\SocketIoClientDotNet.Tests.net45\ClientTests\UrlTest.cs">
+      <Link>ClientTests\UrlTest.cs</Link>
+    </Compile>
+    <Compile Include="..\SocketIoClientDotNet.Tests.net45\ModuleTests\HasBinaryDataTest.cs">
+      <Link>ModuleTests\HasBinaryDataTest.cs</Link>
+    </Compile>
+    <Compile Include="..\SocketIoClientDotNet.Tests.net45\ParserTests\ByteArrayTest.cs">
+      <Link>ParserTests\ByteArrayTest.cs</Link>
+    </Compile>
+    <Compile Include="..\SocketIoClientDotNet.Tests.net45\ParserTests\Helpers.cs">
+      <Link>ParserTests\Helpers.cs</Link>
+    </Compile>
+    <Compile Include="..\SocketIoClientDotNet.Tests.net45\ParserTests\ParserTest.cs">
+      <Link>ParserTests\ParserTest.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <Import Project="..\SocketIoClientDotNet.Xamarin-iOS\packages\xunit.core.2.0.0\build\Xamarin.iOS\xunit.core.props" Condition="Exists('..\SocketIoClientDotNet.Xamarin-iOS\packages\xunit.core.2.0.0\build\Xamarin.iOS\xunit.core.props')" />
+  <Import Project="..\SocketIoClientDotNet.Xamarin-iOS\packages\Xamarin.Forms.1.4.0.6341\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\SocketIoClientDotNet.Xamarin-iOS\packages\Xamarin.Forms.1.4.0.6341\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
+  <Import Project="..\SocketIoClientDotNet.Xamarin-iOS\packages\xunit.runner.devices.1.0.0\build\Xamarin.iOS\xunit.runner.devices.targets" Condition="Exists('..\SocketIoClientDotNet.Xamarin-iOS\packages\xunit.runner.devices.1.0.0\build\Xamarin.iOS\xunit.runner.devices.targets')" />
+  <ItemGroup>
+    <ProjectReference Include="..\SocketIoClientDotNet.Xamarin-iOS\SocketIoClientDotNet.Xamarin-iOS\SocketIoClientDotNet.Xamarin-iOS.csproj">
+      <Project>{D3006848-28FD-40BA-AE0E-5D6FF4D2FBDB}</Project>
+      <Name>SocketIoClientDotNet.Xamarin-iOS</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

@@ -1,6 +1,12 @@
 ﻿<Properties StartupItem="SocketIoClientDotNet.Xamarin-iOS/SocketIoClientDotNet.Xamarin-iOS.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.Tensor5S" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../SocketIoClientDotNet.Tests.Xamarin-iOS.TestApp/UnitTestAppDelegate.cs">
+    <Files>
+      <File FileName="../SocketIoClientDotNet.net45/Client/Socket.cs" Line="1" Column="1" />
+      <File FileName="../SocketIoClientDotNet.net45/Parser/Binary.cs" Line="115" Column="1" />
+      <File FileName="../SocketIoClientDotNet.Tests.Xamarin-iOS.TestApp/UnitTestAppDelegate.cs" Line="11" Column="20" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
