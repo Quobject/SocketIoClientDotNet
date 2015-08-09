@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{D3006848-28FD-40BA-AE0E-5D6FF4D2FBDB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SocketIoClientDotNet</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>SocketIoClientDotNet.Xamarin-iOS</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="WebSocket4Net">
+      <HintPath>..\packages\WebSocket4Net.0.13.1\lib\Xamarin.iOS10\WebSocket4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="EngineIoClientDotNet">
+      <HintPath>..\packages\EngineIoClientDotNet.0.9.21\lib\xamarinios10\EngineIoClientDotNet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="..\..\SocketIoClientDotNet.net45\Client\AckImpl.cs">
+      <Link>Client\AckImpl.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SocketIoClientDotNet.net45\Client\IAck.cs">
+      <Link>Client\IAck.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SocketIoClientDotNet.net45\Client\IO.cs">
+      <Link>Client\IO.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SocketIoClientDotNet.net45\Client\Manager.cs">
+      <Link>Client\Manager.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SocketIoClientDotNet.net45\Client\On.cs">
+      <Link>Client\On.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SocketIoClientDotNet.net45\Client\Socket.cs">
+      <Link>Client\Socket.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SocketIoClientDotNet.net45\Client\SocketIOException.cs">
+      <Link>Client\SocketIOException.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SocketIoClientDotNet.net45\Client\Url.cs">
+      <Link>Client\Url.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SocketIoClientDotNet.net45\Modules\HasBinaryData.cs">
+      <Link>Modules\HasBinaryData.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SocketIoClientDotNet.net45\Parser\Binary.cs">
+      <Link>Parsers\Binary.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SocketIoClientDotNet.net45\Parser\Packet.cs">
+      <Link>Parsers\Packet.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SocketIoClientDotNet.net45\Parser\Parser.cs">
+      <Link>Parsers\Parser.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Client\" />
+    <Folder Include="Modules\" />
+    <Folder Include="Parsers\" />
+  </ItemGroup>
+</Project>

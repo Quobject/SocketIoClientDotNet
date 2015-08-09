@@ -112,7 +112,7 @@ namespace Quobject.SocketIoClientDotNet.Parser
 
         private static object _reconstructPacket(object data, byte[][] buffers)
         {
-            var t = data.GetType();
+            //var t = data.GetType();
 
             if (data is JValue)
             {

@@ -180,7 +180,7 @@ namespace Quobject.SocketIoClientDotNet.Client
 
         private void OnOpen()
         {
-            var log = LogManager.GetLogger(Global.CallerName());
+            //var log = LogManager.GetLogger(Global.CallerName());
             if (Nsp != "/")
             {
                 Packet(new Packet(Parser.Parser.CONNECT));
