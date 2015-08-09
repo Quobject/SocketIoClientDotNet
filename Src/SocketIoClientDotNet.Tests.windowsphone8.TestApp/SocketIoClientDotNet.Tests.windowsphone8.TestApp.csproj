@@ -142,8 +142,8 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Reference Include="EngineIoClientDotNet, Version=0.9.18.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\SocketIoClientDotNet.windowsphone8\packages\EngineIoClientDotNet.0.9.18\lib\windowsphone8\EngineIoClientDotNet.dll</HintPath>
+    <Reference Include="EngineIoClientDotNet, Version=0.9.21.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\SocketIoClientDotNet.windowsphone8\packages\EngineIoClientDotNet.0.9.21\lib\windowsphone8\EngineIoClientDotNet.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
