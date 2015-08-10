@@ -34,61 +34,61 @@
     <Reference Include="System.Core" />
     <Reference Include="monotouch" />
     <Reference Include="WebSocket4Net">
-      <HintPath>..\packages\WebSocket4Net.0.13.1\lib\monotouch10\WebSocket4Net.dll</HintPath>
+      <HintPath>packages\WebSocket4Net.0.13.1\lib\monotouch10\WebSocket4Net.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+      <HintPath>packages\Newtonsoft.Json.7.0.1\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="EngineIoClientDotNet">
-      <HintPath>..\packages\EngineIoClientDotNet.0.9.21\lib\monotouch10\EngineIoClientDotNet.dll</HintPath>
+      <HintPath>packages\EngineIoClientDotNet.0.9.21\lib\monotouch10\EngineIoClientDotNet.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="..\..\SocketIoClientDotNet.net45\Client\AckImpl.cs">
+    <Compile Include="..\SocketIoClientDotNet.net45\Client\AckImpl.cs">
       <Link>Client\AckImpl.cs</Link>
     </Compile>
-    <Compile Include="..\..\SocketIoClientDotNet.net45\Client\IAck.cs">
+    <Compile Include="..\SocketIoClientDotNet.net45\Client\IAck.cs">
       <Link>Client\IAck.cs</Link>
     </Compile>
-    <Compile Include="..\..\SocketIoClientDotNet.net45\Client\IO.cs">
+    <Compile Include="..\SocketIoClientDotNet.net45\Client\IO.cs">
       <Link>Client\IO.cs</Link>
     </Compile>
-    <Compile Include="..\..\SocketIoClientDotNet.net45\Client\Manager.cs">
+    <Compile Include="..\SocketIoClientDotNet.net45\Client\Manager.cs">
       <Link>Client\Manager.cs</Link>
     </Compile>
-    <Compile Include="..\..\SocketIoClientDotNet.net45\Client\On.cs">
+    <Compile Include="..\SocketIoClientDotNet.net45\Client\On.cs">
       <Link>Client\On.cs</Link>
     </Compile>
-    <Compile Include="..\..\SocketIoClientDotNet.net45\Client\Socket.cs">
+    <Compile Include="..\SocketIoClientDotNet.net45\Client\Socket.cs">
       <Link>Client\Socket.cs</Link>
     </Compile>
-    <Compile Include="..\..\SocketIoClientDotNet.net45\Client\SocketIOException.cs">
+    <Compile Include="..\SocketIoClientDotNet.net45\Client\SocketIOException.cs">
       <Link>Client\SocketIOException.cs</Link>
     </Compile>
-    <Compile Include="..\..\SocketIoClientDotNet.net45\Client\Url.cs">
+    <Compile Include="..\SocketIoClientDotNet.net45\Client\Url.cs">
       <Link>Client\Url.cs</Link>
     </Compile>
-    <Compile Include="..\..\SocketIoClientDotNet.net45\Modules\HasBinaryData.cs">
+    <Compile Include="..\SocketIoClientDotNet.net45\Modules\HasBinaryData.cs">
       <Link>Modules\HasBinaryData.cs</Link>
     </Compile>
-    <Compile Include="..\..\SocketIoClientDotNet.net45\Parser\Binary.cs">
+    <Compile Include="..\SocketIoClientDotNet.net45\Parser\Binary.cs">
       <Link>Parsers\Binary.cs</Link>
     </Compile>
-    <Compile Include="..\..\SocketIoClientDotNet.net45\Parser\Packet.cs">
+    <Compile Include="..\SocketIoClientDotNet.net45\Parser\Packet.cs">
       <Link>Parsers\Packet.cs</Link>
     </Compile>
-    <Compile Include="..\..\SocketIoClientDotNet.net45\Parser\Parser.cs">
+    <Compile Include="..\SocketIoClientDotNet.net45\Parser\Parser.cs">
       <Link>Parsers\Parser.cs</Link>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="Client\" />
     <Folder Include="Modules\" />
     <Folder Include="Parsers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>

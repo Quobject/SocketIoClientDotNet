@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocketIoClientDotNet.Xamarin-MonoTouch", "SocketIoClientDotNet.Xamarin-MonoTouch\SocketIoClientDotNet.Xamarin-MonoTouch.csproj", "{C38597DE-DA5B-4CE1-A6AB-25CDC728A216}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocketIoClientDotNet.Tests.Xamarin-MonoTouch.TestApp", "..\SocketIoClientDotNet.Tests.Xamarin-MonoTouch.TestApp\SocketIoClientDotNet.Tests.Xamarin-MonoTouch.TestApp.csproj", "{421E1C75-CEDE-4156-96B3-BACCB44BD185}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocketIoClientDotNet.Xamarin-MonoTouch", "SocketIoClientDotNet.Xamarin-MonoTouch.csproj", "{C38597DE-DA5B-4CE1-A6AB-25CDC728A216}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

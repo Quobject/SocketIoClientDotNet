@@ -142,7 +142,7 @@
   <Import Project="..\SocketIoClientDotNet.Xamarin-MonoTouch\packages\Xamarin.Forms.1.4.0.6341\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\SocketIoClientDotNet.Xamarin-MonoTouch\packages\Xamarin.Forms.1.4.0.6341\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
   <Import Project="..\SocketIoClientDotNet.Xamarin-MonoTouch\packages\xunit.runner.devices.1.0.0\build\MonoTouch\xunit.runner.devices.targets" Condition="Exists('..\SocketIoClientDotNet.Xamarin-MonoTouch\packages\xunit.runner.devices.1.0.0\build\MonoTouch\xunit.runner.devices.targets')" />
   <ItemGroup>
-    <ProjectReference Include="..\SocketIoClientDotNet.Xamarin-MonoTouch\SocketIoClientDotNet.Xamarin-MonoTouch\SocketIoClientDotNet.Xamarin-MonoTouch.csproj">
+    <ProjectReference Include="..\SocketIoClientDotNet.Xamarin-MonoTouch\SocketIoClientDotNet.Xamarin-MonoTouch.csproj">
       <Project>{C38597DE-DA5B-4CE1-A6AB-25CDC728A216}</Project>
       <Name>SocketIoClientDotNet.Xamarin-MonoTouch</Name>
     </ProjectReference>
