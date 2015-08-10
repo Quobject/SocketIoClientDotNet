@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocketIoClientDotNet.Xamarin-iOS", "SocketIoClientDotNet.Xamarin-iOS\SocketIoClientDotNet.Xamarin-iOS.csproj", "{D3006848-28FD-40BA-AE0E-5D6FF4D2FBDB}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocketIoClientDotNet_Tests", "..\SocketIoClientDotNet.Tests.Xamarin-iOS.TestApp\SocketIoClientDotNet_Tests.csproj", "{0B25CB88-CEBB-49FA-9334-DE6DC271249A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocketIoClientDotNet.Xamarin-iOS", "SocketIoClientDotNet.Xamarin-iOS.csproj", "{D3006848-28FD-40BA-AE0E-5D6FF4D2FBDB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
