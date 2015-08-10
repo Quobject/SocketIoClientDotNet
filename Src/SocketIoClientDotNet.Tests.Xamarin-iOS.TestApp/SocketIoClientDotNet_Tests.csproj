@@ -57,6 +57,9 @@
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchI18n>
+    </MtouchI18n>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -110,7 +113,6 @@
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
     <None Include="packages.config" />
-    <None Include="AppDelegate.cs.txt" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -135,6 +137,7 @@
     <Compile Include="..\SocketIoClientDotNet.Tests.net45\ParserTests\ParserTest.cs">
       <Link>ParserTests\ParserTest.cs</Link>
     </Compile>
+    <Compile Include="AppDelegate.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\SocketIoClientDotNet.Xamarin-iOS\packages\xunit.core.2.0.0\build\Xamarin.iOS\xunit.core.props" Condition="Exists('..\SocketIoClientDotNet.Xamarin-iOS\packages\xunit.core.2.0.0\build\Xamarin.iOS\xunit.core.props')" />

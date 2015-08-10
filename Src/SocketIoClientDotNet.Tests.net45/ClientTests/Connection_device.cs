@@ -16,7 +16,7 @@ namespace SocketIoClientDotNet.Tests.ClientTests
 
         protected IO.Options CreateOptions()
         {
-            var log = LogManager.GetLogger(Global.CallerName());
+            //var log = LogManager.GetLogger(Global.CallerName());
 
 
             var config = ConfigBase.Load();
@@ -24,7 +24,7 @@ namespace SocketIoClientDotNet.Tests.ClientTests
             options.Port = config.server.port;
             options.Hostname = config.server.hostname;
             options.ForceNew = true;
-            log.Info("Please add to your hosts file: 127.0.0.1 " + options.Hostname);
+            //log.Info("Please add to your hosts file: 127.0.0.1 " + options.Hostname);
 
             return options;
         }
@@ -39,13 +39,13 @@ namespace SocketIoClientDotNet.Tests.ClientTests
 
         protected IO.Options CreateOptionsSecure()
         {
-            var log = LogManager.GetLogger(Global.CallerName());
+            //var log = LogManager.GetLogger(Global.CallerName());
 
             var config = ConfigBase.Load();
             var options = new IO.Options();
             options.Port = config.server.ssl_port;
             options.Hostname = config.server.hostname;
-            log.Info("Please add to your hosts file: 127.0.0.1 " + options.Hostname);
+            //log.Info("Please add to your hosts file: 127.0.0.1 " + options.Hostname);
             options.Secure = true;
             options.IgnoreServerCertificateValidation = true;
             return options;
