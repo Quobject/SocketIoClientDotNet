@@ -1,4 +1,4 @@
-﻿<Properties StartupItem="SocketIoClientDotNet.Xamarin-Android\SocketIoClientDotNet.Xamarin-Android.csproj">
+﻿<Properties StartupItem="../SocketIoClientDotNet.Tests.Xamarin-Android.TestApp/SocketIoClientDotNet.Tests.Xamarin-Android.TestApp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Xamarin_Android_API_21" />
   <MonoDevelop.Ide.Workbench ActiveDocument="..\SocketIoClientDotNet.Tests.net45\ClientTests\Connection_device.cs">
     <Files>

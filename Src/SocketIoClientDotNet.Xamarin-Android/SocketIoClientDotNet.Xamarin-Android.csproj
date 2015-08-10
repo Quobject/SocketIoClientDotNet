@@ -40,34 +40,63 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
-    <Reference Include="EngineIoClientDotNet, Version=0.9.21.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\packages\EngineIoClientDotNet.0.9.21\lib\monoandroid10\EngineIoClientDotNet.dll</HintPath>
+    <Reference Include="WebSocket4Net">
+      <HintPath>packages\WebSocket4Net.0.13.1\lib\monoandroid23\WebSocket4Net.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed">
-      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>packages\Newtonsoft.Json.7.0.1\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="WebSocket4Net, Version=0.12.0.0, Culture=neutral, PublicKeyToken=eb4e154b696bf72a">
-      <HintPath>..\packages\WebSocket4Net.0.13.1\lib\monoandroid23\WebSocket4Net.dll</HintPath>
+    <Reference Include="EngineIoClientDotNet">
+      <HintPath>packages\EngineIoClientDotNet.0.9.21\lib\monoandroid10\EngineIoClientDotNet.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Client\AckImpl.cs" />
-    <Compile Include="Client\IAck.cs" />
-    <Compile Include="Client\IO.cs" />
-    <Compile Include="Client\Manager.cs" />
-    <Compile Include="Client\On.cs" />
-    <Compile Include="Client\Socket.cs" />
-    <Compile Include="Client\SocketIOException.cs" />
-    <Compile Include="Client\Url.cs" />
-    <Compile Include="Modules\HasBinaryData.cs" />
-    <Compile Include="Parsers\Binary.cs" />
-    <Compile Include="Parsers\Packet.cs" />
-    <Compile Include="Parsers\Parser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="..\SocketIoClientDotNet.net45\Client\AckImpl.cs">
+      <Link>Client\AckImpl.cs</Link>
+    </Compile>
+    <Compile Include="..\SocketIoClientDotNet.net45\Client\IAck.cs">
+      <Link>Client\IAck.cs</Link>
+    </Compile>
+    <Compile Include="..\SocketIoClientDotNet.net45\Client\IO.cs">
+      <Link>Client\IO.cs</Link>
+    </Compile>
+    <Compile Include="..\SocketIoClientDotNet.net45\Client\Manager.cs">
+      <Link>Client\Manager.cs</Link>
+    </Compile>
+    <Compile Include="..\SocketIoClientDotNet.net45\Client\On.cs">
+      <Link>Client\On.cs</Link>
+    </Compile>
+    <Compile Include="..\SocketIoClientDotNet.net45\Client\Socket.cs">
+      <Link>Client\Socket.cs</Link>
+    </Compile>
+    <Compile Include="..\SocketIoClientDotNet.net45\Client\SocketIOException.cs">
+      <Link>Client\SocketIOException.cs</Link>
+    </Compile>
+    <Compile Include="..\SocketIoClientDotNet.net45\Client\Url.cs">
+      <Link>Client\Url.cs</Link>
+    </Compile>
+    <Compile Include="..\SocketIoClientDotNet.net45\Modules\HasBinaryData.cs">
+      <Link>Modules\HasBinaryData.cs</Link>
+    </Compile>
+    <Compile Include="..\SocketIoClientDotNet.net45\Parser\Binary.cs">
+      <Link>Parsers\Binary.cs</Link>
+    </Compile>
+    <Compile Include="..\SocketIoClientDotNet.net45\Parser\Packet.cs">
+      <Link>Parsers\Packet.cs</Link>
+    </Compile>
+    <Compile Include="..\SocketIoClientDotNet.net45\Parser\Parser.cs">
+      <Link>Parsers\Parser.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Client\" />
+    <Folder Include="Modules\" />
+    <Folder Include="Parsers\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
-  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
 </Project>
