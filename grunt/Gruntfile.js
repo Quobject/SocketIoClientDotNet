@@ -10,6 +10,9 @@ module.exports = function (grunt) {
       { "Name": "SocketIoClientDotNet.net40", "NuGetDir": "net40" },
       { "Name": "SocketIoClientDotNet.net45", "NuGetDir": "net45" },
       { "Name": "SocketIoClientDotNet.windowsphone8", "NuGetDir": "windowsphone8" },
+      { "Name": "SocketIoClientDotNet.Xamarin-iOS", "NuGetDir": "xamarinios10", "SourceDir": "xamarinios10" },
+      { "Name": "SocketIoClientDotNet.Xamarin-MonoTouch", "NuGetDir": "monotouch10", "SourceDir": "monotouch10" },
+      { "Name": "SocketIoClientDotNet.Xamarin-Android", "NuGetDir": "monoandroid10", "SourceDir": "", copyOnly: true },
       { "Name": "SocketIoClientDotNet.netcore45", "NuGetDir": "netcore45" },
       { "Name": "SocketIoClientDotNet.portable-wpa81+wp81", "NuGetDir": "portable-wpa81+wp81" },
       { "Name": "SocketIoClientDotNet.portable-win81+wpa81", "NuGetDir": "portable-win81+wpa81" }
