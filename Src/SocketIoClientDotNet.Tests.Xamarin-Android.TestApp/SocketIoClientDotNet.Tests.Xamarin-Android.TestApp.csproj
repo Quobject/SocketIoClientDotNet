@@ -116,7 +116,6 @@
     <None Include="Resources\AboutResources.txt" />
     <None Include="packages.config" />
     <None Include="Properties\AndroidManifest.xml" />
-    <None Include="MainActivity.cs.txt" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-hdpi\Icon.png" />
