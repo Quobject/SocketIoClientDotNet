@@ -1,20 +1,6 @@
-﻿<Properties StartupItem="../SocketIoClientDotNet.Tests.Xamarin-iOS.TestApp/SocketIoClientDotNet_Tests.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone4s.8.4" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="packages.config">
-    <Files>
-      <File FileName="../SocketIoClientDotNet.net45/Client/Socket.cs" Line="1" Column="1" />
-      <File FileName="../SocketIoClientDotNet.net45/Parser/Binary.cs" Line="1" Column="1" />
-      <File FileName="../SocketIoClientDotNet.Tests.Xamarin-iOS.TestApp/Entitlements.plist" />
-      <File FileName="../SocketIoClientDotNet.Tests.Xamarin-iOS.TestApp/Info.plist" />
-      <File FileName="../SocketIoClientDotNet.Tests.Xamarin-iOS.TestApp/SocketIoClientDotNet_Tests.csproj" Line="1" Column="1" />
-      <File FileName="../SocketIoClientDotNet.Tests.net45/ClientTests/Connection_device.cs" Line="1" Column="1" />
-      <File FileName="../SocketIoClientDotNet.Tests.Xamarin-iOS.TestApp/Main.cs" Line="1" Column="1" />
-      <File FileName="../SocketIoClientDotNet.Tests.Xamarin-iOS.TestApp/AppDelegate.cs" Line="1" Column="1" />
-      <File FileName="../SocketIoClientDotNet.net45/Client/IO.cs" Line="1" Column="1" />
-      <File FileName="../../../../../../Library/Frameworks/Mono.framework/Versions/4.0.2/lib/mono/4.5/Microsoft.Common.targets" Line="1" Column="1" />
-      <File FileName="packages.config" Line="1" Column="1" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+﻿<Properties StartupItem="..\SocketIoClientDotNet.Tests.Xamarin-iOS.TestApp\SocketIoClientDotNet_Tests.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|iPhoneSimulator" />
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
