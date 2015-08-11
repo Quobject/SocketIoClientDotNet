@@ -69,10 +69,10 @@
 
 
 
-    function addBuildWithTitle(title, dir) {
+    function addBuildWithTitle(title, destsubdir, srcsubdir) {
       var
-        src_path = string.format('{0}/../../Src/{1}/{2}{3}/', __dirname,title, output_path_base, dir),
-        dst_path = package_lib_path + dir + '/',
+        src_path = string.format('{0}/../../Src/{1}/{2}{3}/', __dirname, title, output_path_base, srcsubdir),
+        dst_path = package_lib_path + destsubdir + '/',
         //src_file = string.format('{0}SocketIoClientDotNet.dll', src_path),
         src_file = string.format('{0}SocketIoClientDotNet.dll', src_path),
         dst_file = string.format('{0}SocketIoClientDotNet.dll', dst_path);
@@ -87,7 +87,7 @@
     }
 
     for (i = 0; i < nuget_builds.length; i++) {
-      addBuildWithTitle(nuget_builds[i].Name, nuget_builds[i].NuGetDir);
+      addBuildWithTitle(nuget_builds[i].Name, nuget_builds[i].NuGetDir, nuget_builds[i].SourceDir);
     }
     tasks.push('C:/WINDOWS/System32/WindowsPowerShell/v1.0/powershell.exe pwd');
     tasks.push(string.format('{0} pack SocketIoClientDotNet.nuspec', config.win.nuget));

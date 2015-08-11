@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>SocketIoClientDotNet</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>SocketIoClientDotNet.Xamarin-iOS</AssemblyName>
+    <AssemblyName>SocketIoClientDotNet</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

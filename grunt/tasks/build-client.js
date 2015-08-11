@@ -48,7 +48,9 @@
 
     if (os === 'win') {
       for (i = 0; i < nuget_builds.length; i++) {
-        addBuildWithTitle(nuget_builds[i].Name, nuget_builds[i].NuGetDir);
+        if (!nuget_builds[i].copyOnly) {
+          addBuildWithTitle(nuget_builds[i].Name, nuget_builds[i].NuGetDir);
+        }
       }      
     } else {
       addBuildWithTitle('SocketIoClientDotNet.mono');

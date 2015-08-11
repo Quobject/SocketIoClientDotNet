@@ -42,7 +42,7 @@ More examples can be found in [unit tests](https://github.com/Quobject/SocketIoC
 This library supports all of the features the JS client does, including events, options and upgrading transport.
 
 ## Framework Versions
-.Net Framework 3.5, .Net Framework 4.0, .Net Framework 4.5, Windows 8, Windows 8.1, Windows Phone 8, Windows Phone 8.1, Mono, Unity
+.Net Framework 3.5, .Net Framework 4.0, .Net Framework 4.5, Windows 8, Windows 8.1, Windows Phone 8, Windows Phone 8.1, Mono, Unity3D, Xamarin-iOS,  Xamarin-MonoTouch,  Xamarin-Android
 
 ## License
 
