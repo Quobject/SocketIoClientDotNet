@@ -82,4 +82,5 @@ module.exports = function (grunt) {
   grunt.registerTask('default', ['jshint', 'installNpm', 'nuget', 'buildClient', 'buildTest', 'startServer', 'testClient']);
   grunt.registerTask('test', ['jshint', 'buildClient', 'buildTest', 'testClient']);
   grunt.registerTask('makeNuget', ['jshint','clean:working','createNugetPackage']);
+  grunt.registerTask('makeComponent', ['jshint','clean:working','createNugetPackage','createXamarinComponent']);
 };

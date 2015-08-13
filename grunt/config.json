@@ -9,10 +9,12 @@
     "powershell":"C:/WINDOWS/System32/WindowsPowerShell/v1.0/powershell.exe",
     "msbuild":"C:/Windows/Microsoft.NET/Framework/v4.0.30319/msbuild.exe",
     "xunit_path":"C:/Development/quobject.visualstudio.com/EngineIoClientDotNet/Src/EngineIoClientDotNet.net45/packages/xunit.runner.console.2.0.0/tools",
-    "nuget":"C:/ProgramData/chocolatey/bin/NuGet.exe"
+    "nuget":"C:/ProgramData/chocolatey/bin/NuGet.exe",
+    "xamarin_component":"xamarin-component.exe"
   },
   "linux":{  
     "msbuild":"xbuild",
-    "xunit_path":"/home/apollo/vendors/xunit"
+    "xunit_path":"/home/apollo/vendors/xunit",
+    "xamarin_component":"xamarin-component"
   }
 }

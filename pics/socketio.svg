@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1024"
+   height="1024"
+   viewBox="0 0 1024 1024"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="socketio.svg"
+   inkscape:export-filename="C:\Projects\Socket.IO-Client\icons\socketio_1024x1024.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs4">
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Drop Shadow"
+       id="filter4258">
+      <feFlood
+         flood-opacity="0.658824"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood4260" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite4262" />
+      <feGaussianBlur
+         in="composite1"
+         stdDeviation="6"
+         result="blur"
+         id="feGaussianBlur4264" />
+      <feOffset
+         dx="-6"
+         dy="6"
+         result="offset"
+         id="feOffset4266" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="composite2"
+         id="feComposite4268" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.63454545"
+     inkscape:cx="512"
+     inkscape:cy="512"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     borderlayer="true"
+     units="px"
+     inkscape:window-width="1440"
+     inkscape:window-height="897"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     showguides="false" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-28.362114)">
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:10;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4199"
+       width="1100"
+       height="1100"
+       x="-38"
+       y="-9.637886" />
+    <g
+       style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1"
+       id="logo"
+       sketch:type="MSLayerGroup"
+       transform="matrix(20.930233,0,0,20.930233,61.99999,90.362104)">
+      <path
+         style="fill:#ffffff"
+         inkscape:connector-curvature="0"
+         d="M 0,0 43,0 43,43 0,43 0,0 0,0 Z"
+         id="Shape"
+         sketch:type="MSShapeGroup" />
+      <path
+         style="fill:#010101"
+         inkscape:connector-curvature="0"
+         d="m 16.2,1.24 c 5.42,-1.39 11.41,-0.58 16.19,2.37 6.02,3.6 9.95,10.41 10.05,17.42 0.22,7.08 -3.47,14.1 -9.4,17.95 -6.6,4.44 -15.73,4.61 -22.47,0.39 C 3.7,35.27 -0.31,27 0.72,19.06 1.55,10.67 8.03,3.27 16.2,1.24 l 0,0 z"
+         id="path4155"
+         sketch:type="MSShapeGroup" />
+      <path
+         style="fill:#ffffff"
+         inkscape:connector-curvature="0"
+         d="M 15.37,4.67 C 25.61,0.57 38.17,8.14 39.23,19.12 40.88,29 32.68,39.04 22.67,39.33 13.15,40.28 3.95,32.21 3.68,22.65 2.97,14.91 8.07,7.23 15.37,4.67 l 0,0 z"
+         id="path4157"
+         sketch:type="MSShapeGroup" />
+      <path
+         style="fill:#010101"
+         inkscape:connector-curvature="0"
+         d="m 16.4,20.44 c 4.59,-3.75 9.08,-7.63 13.77,-11.27 -2.46,3.78 -4.99,7.51 -7.45,11.29 -2.11,0.01 -4.22,0.01 -6.32,-0.02 l 0,0 z"
+         id="path4159"
+         sketch:type="MSShapeGroup" />
+      <path
+         style="fill:#010101"
+         inkscape:connector-curvature="0"
+         d="m 20.28,22.53 c 2.12,0 4.23,0 6.34,0.03 -4.62,3.73 -9.09,7.64 -13.79,11.27 2.46,-3.78 4.99,-7.52 7.45,-11.3 l 0,0 z"
+         id="path4161"
+         sketch:type="MSShapeGroup" />
+    </g>
+    <path
+       style="fill:#000000;fill-rule:evenodd;stroke:none;stroke-width:1"
+       inkscape:connector-curvature="0"
+       d="m 71.203628,1425.8919 c 8.9746,4.9858 22.1872,8.4759 36.895592,8.4759 32.1589,0 49.3602,-15.9548 49.3602,-37.8926 -0.2493,-17.9492 -10.4703,-29.1675 -32.4082,-37.1449 -15.4563,-5.4845 -21.19,-9.2239 -21.19,-16.952 0,-7.4788 5.983,-12.714 16.952,-12.714 10.7196,0 20.4421,3.9887 25.6773,6.9802 l 5.983,-21.6886 c -6.9802,-3.7394 -18.697,-7.2295 -32.1589,-7.2295 -28.170292,0 -45.870192,16.7027 -45.870192,38.142 -0.2493,14.2098 9.7225,27.1731 33.405492,35.3998 14.9576,5.2352 19.9435,9.4732 19.9435,17.6999 0,7.9774 -5.9831,13.4619 -19.445,13.4619 -10.968896,0 -24.181492,-4.4873 -31.161692,-8.7253 l -5.9831,22.1872 z M 227.34492,1307.7264 c -36.6463,0 -62.8222,24.4308 -62.8222,64.3179 0,38.8899 26.4252,62.5728 60.8278,62.5728 30.9125,0 62.3236,-19.9435 62.3236,-64.5671 0,-36.8956 -24.1815,-62.3236 -60.3292,-62.3236 z m -0.7479,22.4365 c 20.9407,0 29.4167,21.6886 29.4167,40.6349 0,24.4309 -12.2154,41.6322 -29.666,41.6322 -18.6971,0 -30.1646,-17.6999 -30.1646,-41.1336 0,-20.1928 8.7253,-41.1335 30.4139,-41.1335 z m 160.8779,75.2868 c -5.9831,2.493 -13.4619,4.7366 -24.1815,4.7366 -20.9408,0 -37.1449,-14.2097 -37.1449,-39.1392 -0.2493,-22.1872 13.7112,-39.3885 37.1449,-39.3885 10.9689,0 18.1984,2.493 23.1843,4.7366 l 5.4845,-22.935 c -6.9802,-3.2409 -18.4478,-5.7338 -29.666,-5.7338 -42.6293,0 -67.5588,28.4195 -67.5588,64.8165 0,37.6434 24.6802,61.8249 62.5729,61.8249 15.2069,0 27.921,-3.2408 34.4026,-6.2323 l -4.238,-22.6858 z m 47.1997,-150.5737 -30.6632,0 0,176.9989 30.6632,0 0,-41.3828 10.4704,-12.2154 34.9012,53.5982 37.6434,0 -51.3546,-71.7967 44.8729,-49.6096 -36.8955,0 -29.4167,39.1392 c -3.2409,4.238 -6.731,9.4732 -9.7225,14.2098 l -0.4986,0 0,-108.9416 z m 187.0538,124.8964 c 0.49858,-2.7422 0.99717,-7.2295 0.99717,-12.9633 0,-26.6744 -12.9633,-59.0827 -52.35177,-59.0827 -38.8899,0 -59.3321,31.6604 -59.3321,65.3151 0,37.1448 23.1844,61.3263 62.5729,61.3263 17.45061,0 31.90967,-3.2408 42.38003,-7.4788 l -4.4873,-21.19 c -9.22389,3.4902 -19.44495,5.4845 -33.65473,5.4845 -19.4449,0 -36.6462,-9.4732 -37.3941,-31.4111 l 81.2699,0 z m -81.2699,-21.4393 c 1.2464,-12.4647 9.2239,-29.666 28.1702,-29.666 20.44215,0 25.42803,18.4478 25.17874,29.666 l -53.34894,0 z m 101.79512,-75.2868 0,27.4223 -17.4506,0 0,22.9351 17.4506,0 0,57.0884 c 0,15.9548 2.99154,26.9238 9.47318,33.904 5.73377,6.2323 15.20695,9.9717 26.42519,9.9717 9.72248,0 17.6999,-1.2464 22.18719,-2.9915 l -0.49859,-23.4336 c -2.74223,0.7479 -6.73094,1.4958 -11.96612,1.4958 -11.71683,0 -15.70554,-7.7282 -15.70554,-22.4365 l 0,-53.5983 29.16743,0 0,-22.9351 -29.16743,0 0,-34.6519 -29.91531,7.2296 z m 85.59102,151.5708 c 11.46755,0 18.94637,-8.4759 18.94637,-19.6942 0,-11.7168 -7.72812,-19.6942 -18.94637,-19.6942 -10.96894,0 -18.94636,8.2267 -18.94636,19.6942 0,11.2183 7.72812,19.6942 18.94636,19.6942 z m 64.15172,-2.7422 0,-121.4063 -30.91248,0 0,121.4063 30.91248,0 z m -15.45623,-172.013 c -10.22107,0 -17.20131,7.2295 -17.20131,16.7027 0,9.2239 6.73094,16.4534 16.95201,16.4534 10.71965,0 17.45059,-7.2295 17.45059,-16.4534 -0.24929,-9.4732 -6.73094,-16.7027 -17.20129,-16.7027 z m 93.06982,47.8645 c -36.64623,0 -62.82212,24.4308 -62.82212,64.3179 0,38.8899 26.42519,62.5728 60.82779,62.5728 30.91251,0 62.32356,-19.9435 62.32356,-64.5671 0,-36.8956 -24.18152,-62.3236 -60.32923,-62.3236 z m -0.74786,22.4365 c 20.94075,0 29.41675,21.6886 29.41675,40.6349 0,24.4309 -12.21548,41.6322 -29.66604,41.6322 -18.69707,0 -30.16461,-17.6999 -30.16461,-41.1336 0,-20.1928 8.7253,-41.1335 30.4139,-41.1335 z"
+       id="socket.io"
+       sketch:type="MSShapeGroup" />
+  </g>
+</svg>
