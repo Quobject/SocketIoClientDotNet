@@ -44,3 +44,11 @@ samples:
       - project: SocketIoClientDotNet.Sample.Xamarin-Android
         packages:
          - SocketIoClientDotNet
+  - name: iOS Sample
+    path: ../../Src/SocketIoClientDotNet.Sample.Xamarin-iOS/SocketIoClientDotNet.Sample.Xamarin-iOS
+    removeProjects:
+      - SocketIoClientDotNet.Xamarin-iOS
+    installNuGets:
+      - project: SocketIoClientDotNet.Sample.Xamarin-iOS
+        packages:
+         - SocketIoClientDotNet

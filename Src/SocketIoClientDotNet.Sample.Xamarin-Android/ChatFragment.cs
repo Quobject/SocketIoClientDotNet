@@ -23,7 +23,7 @@ namespace SocketIoClientDotNet.Sample.Xamarin_Android
         private readonly Socket socket;
         private readonly ChatAdapter adapter;
 
-        private List<ChatAdapter.ChatItem> chatItems = new List<ChatAdapter.ChatItem>();
+        private readonly List<ChatAdapter.ChatItem> chatItems = new List<ChatAdapter.ChatItem>();
         private List<string> typingItems = new List<string>();
         private bool connected = false;
         private bool typing = false;
@@ -36,7 +36,7 @@ namespace SocketIoClientDotNet.Sample.Xamarin_Android
             this.socket = socket;
             this.adapter = new ChatAdapter(chatItems);
 
-            AttachSocketEvents(socket, alert);
+            AttachSocketEvents(alert);
         }
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
@@ -66,7 +66,7 @@ namespace SocketIoClientDotNet.Sample.Xamarin_Android
             return view;
         }
 
-        private void AttachSocketEvents(Socket socket, AlertDialog alert)
+        private void AttachSocketEvents(AlertDialog alert)
         {
             // Whenever the server emits "login", log the login message
             socket.On("login", data =>
