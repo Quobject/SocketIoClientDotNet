@@ -45,7 +45,7 @@ samples:
         packages:
          - SocketIoClientDotNet
   - name: iOS Sample
-    path: ../../Src/SocketIoClientDotNet.Sample.Xamarin-iOS/SocketIoClientDotNet.Sample.Xamarin-iOS
+    path: ../../Src/SocketIoClientDotNet.Sample.Xamarin-iOS/SocketIoClientDotNet.Sample.Xamarin-iOS.sln
     removeProjects:
       - SocketIoClientDotNet.Xamarin-iOS
     installNuGets:
