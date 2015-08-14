@@ -55,7 +55,7 @@
 
     </dependencies>
     <projectUrl>https://github.com/Quobject/SocketIoClientDotNet/</projectUrl>
-    <description>This is the Socket.IO Client Library for C#.</description>
+    <description>This is the Socket.IO Client Library for .NET.</description>
     <summary>This library supports all of the features the JS client does, including events, options and upgrading transport. SocketIoClientDotNet has a similar api to those of the JavaScript client.</summary>
     <tags>socket.io.client</tags>
     <frameworkAssemblies>

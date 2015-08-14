@@ -1,0 +1,54 @@
+%YAML 1.2
+---
+#info
+name: Socket.IO Client .NET
+id: SocketIoClientDotNet
+publisher: Matthias Ludwig
+publisher-url: https://github.com/Quobject/SocketIoClientDotNet/
+summary: This is the Socket.IO Client Library for .NET.
+version: @VERSION@
+src-url: https://github.com/Quobject/SocketIoClientDotNet
+
+# docs
+details: ../../DETAILS.md
+license: ../../LICENSE.md
+getting-started: ../../DETAILS.md
+icons: 
+  - ../../pics/socketio_128x128.png
+  - ../../pics/socketio_512x512.png
+
+# assemblies
+is_shell: true
+no_build: true
+# NuGets used by new versions of XS and VS
+packages:
+  android: 
+    - SocketIoClientDotNet, Version=@VERSION@
+local-nuget-repo: ../NuGet/
+# libraries used for old versions of XS
+libraries:
+  android: ../NuGet/lib/monoandroid10/SocketIoClientDotNet.dll
+  ios: ../NuGet/lib/xamarinios10/SocketIoClientDotNet.dll
+  ios-unified: ../NuGet/lib/monotouch10/SocketIoClientDotNet.dll
+  winphone-8.0: ../NuGet/lib/windowsphone8/SocketIoClientDotNet.dll
+  winphone-8.1: ../NuGet/lib/portable-wpa81+wp81/SocketIoClientDotNet.dll
+  win8: ../NuGet/lib/netcore45/SocketIoClientDotNet.dll
+
+# samples
+samples: 
+  - name: Android Sample
+    path: ../../Src/SocketIoClientDotNet.Sample.Xamarin-Android/SocketIoClientDotNet.Sample.Xamarin-Android.sln
+    removeProjects:
+      - SocketIoClientDotNet.Xamarin-Android
+    installNuGets:
+      - project: SocketIoClientDotNet.Sample.Xamarin-Android
+        packages:
+         - SocketIoClientDotNet
+  - name: iOS Sample
+    path: ../../Src/SocketIoClientDotNet.Sample.Xamarin-iOS/SocketIoClientDotNet.Sample.Xamarin-iOS.sln
+    removeProjects:
+      - SocketIoClientDotNet.Xamarin-iOS
+    installNuGets:
+      - project: SocketIoClientDotNet.Sample.Xamarin-iOS
+        packages:
+         - SocketIoClientDotNet
