@@ -63,5 +63,5 @@ List of donators:
 * Reinis Kopmanis - $20
 * Evan Reeves - $16
 * Gianni Angelozzi - $30
-* Robert Sachar - $50
+* Robert Sachar - $75
 
