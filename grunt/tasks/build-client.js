@@ -26,7 +26,7 @@
       //  '{0} {1} /p:Configuration={2}',
       i;
 
-    function addBuildWithTitle(title, dir) {
+    function addBuildWithTitle(title, dir, copyOnly) {
       var   
         dir_path = string.format('{0}/../../Src/{1}/', __dirname, title),
         csproj = string.format('{0}{1}.csproj', dir_path, title),
@@ -41,20 +41,15 @@
       template_file_content = S(template_file_content).replaceAll('@VERSION@', config.version).s;
       //grunt.log.writeln('template_file_content = "%s"', template_file_content);
       fs.writeFileSync(string.format('{0}Properties/AssemblyInfo.cs', dir_path), template_file_content);
-
-      tasks.push(clean);
-      //tasks.push(build);    
+      if (!copyOnly) {
+        tasks.push(clean);
+        //tasks.push(build);    
+      }
     }
 
-    if (os === 'win') {
-      for (i = 0; i < nuget_builds.length; i++) {
-        if (!nuget_builds[i].copyOnly) {
-          addBuildWithTitle(nuget_builds[i].Name, nuget_builds[i].NuGetDir);
-        }
-      }      
-    } else {
-      addBuildWithTitle('SocketIoClientDotNet.mono');
-    }
+    for (i = 0; i < nuget_builds.length; i++) {
+      addBuildWithTitle(nuget_builds[i].Name, nuget_builds[i].NuGetDir, nuget_builds[i].copyOnly);
+    }      
 
     grunt.log.writeln('tasks = %s', JSON.stringify(tasks));
     grunt.config('shell.exec.command', tasks.join('&&'));

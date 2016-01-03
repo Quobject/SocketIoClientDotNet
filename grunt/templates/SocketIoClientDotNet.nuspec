@@ -9,48 +9,48 @@
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <dependencies>
       <group targetFramework="netcore45">
-        <dependency id="Newtonsoft.Json" version="7.0.1" />
-        <dependency id="EngineIoClientDotNet" version="0.9.21" />
+        <dependency id="Newtonsoft.Json" version="8.0.1" />
+        <dependency id="EngineIoClientDotNet" version="0.9.22" />
       </group>
       <group targetFramework="portable-wpa81+wp81">
-        <dependency id="Newtonsoft.Json" version="7.0.1" />
-        <dependency id="EngineIoClientDotNet" version="0.9.21" />
+        <dependency id="Newtonsoft.Json" version="8.0.1" />
+        <dependency id="EngineIoClientDotNet" version="0.9.22" />
       </group>
       <group targetFramework="net35">
-        <dependency id="WebSocket4Net" version="0.13.1" />
-        <dependency id="Newtonsoft.Json" version="7.0.1" />
-        <dependency id="System.Threading.Tasks" version="3.1.1" />
-        <dependency id="EngineIoClientDotNet" version="0.9.21" />
+        <dependency id="WebSocket4Net" version="0.14.1" />
+        <dependency id="Newtonsoft.Json" version="8.0.1" />
+        <dependency id="System.Threading.Tasks.Unofficial" version="3.1.0" />
+        <dependency id="EngineIoClientDotNet" version="0.9.22" />
       </group>
       <group targetFramework="net40">
-        <dependency id="WebSocket4Net" version="0.13.1" />
-        <dependency id="Newtonsoft.Json" version="7.0.1" />
-        <dependency id="EngineIoClientDotNet" version="0.9.21" />
+        <dependency id="WebSocket4Net" version="0.14.1" />
+        <dependency id="Newtonsoft.Json" version="8.0.1" />
+        <dependency id="EngineIoClientDotNet" version="0.9.22" />
       </group>
       <group targetFramework="net45">
-        <dependency id="WebSocket4Net" version="0.13.1" />
-        <dependency id="Newtonsoft.Json" version="7.0.1" />
-        <dependency id="EngineIoClientDotNet" version="0.9.21" />
+        <dependency id="WebSocket4Net" version="0.14.1" />
+        <dependency id="Newtonsoft.Json" version="8.0.1" />
+        <dependency id="EngineIoClientDotNet" version="0.9.22" />
       </group>
       <group targetFramework="windowsphone8">
         <dependency id="WebSocket4Net" version="0.12" />
-        <dependency id="Newtonsoft.Json" version="7.0.1" />
-        <dependency id="EngineIoClientDotNet" version="0.9.21" />
+        <dependency id="Newtonsoft.Json" version="8.0.1" />
+        <dependency id="EngineIoClientDotNet" version="0.9.22" />
       </group>
       <group targetFramework="monoandroid10">
-        <dependency id="WebSocket4Net" version="0.13.1" />
-        <dependency id="Newtonsoft.Json" version="7.0.1" />
-        <dependency id="EngineIoClientDotNet" version="0.9.21" />
+        <dependency id="WebSocket4Net" version="0.14.1" />
+        <dependency id="Newtonsoft.Json" version="8.0.1" />
+        <dependency id="EngineIoClientDotNet" version="0.9.22" />
       </group>
       <group targetFramework="xamarinios10">
-        <dependency id="WebSocket4Net" version="0.13.1" />
-        <dependency id="Newtonsoft.Json" version="7.0.1" />
-        <dependency id="EngineIoClientDotNet" version="0.9.21" />
+        <dependency id="WebSocket4Net" version="0.14.1" />
+        <dependency id="Newtonsoft.Json" version="8.0.1" />
+        <dependency id="EngineIoClientDotNet" version="0.9.22" />
       </group>
       <group targetFramework="monotouch10">
-        <dependency id="WebSocket4Net" version="0.13.1" />
-        <dependency id="Newtonsoft.Json" version="7.0.1" />
-        <dependency id="EngineIoClientDotNet" version="0.9.21" />
+        <dependency id="WebSocket4Net" version="0.14.1" />
+        <dependency id="Newtonsoft.Json" version="8.0.1" />
+        <dependency id="EngineIoClientDotNet" version="0.9.22" />
       </group>
 
     </dependencies>
