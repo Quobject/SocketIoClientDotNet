@@ -47,6 +47,11 @@
         <dependency id="Newtonsoft.Json" version="8.0.1" />
         <dependency id="EngineIoClientDotNet" version="0.9.22" />
       </group>
+      <group targetFramework="Xamarin.Mac20">
+        <dependency id="WebSocket4Net" version="0.14.1" />
+        <dependency id="Newtonsoft.Json" version="8.0.1" />
+        <dependency id="EngineIoClientDotNet" version="0.9.22" />
+      </group>
       <group targetFramework="monotouch10">
         <dependency id="WebSocket4Net" version="0.14.1" />
         <dependency id="Newtonsoft.Json" version="8.0.1" />
