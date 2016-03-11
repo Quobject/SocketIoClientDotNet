@@ -10,7 +10,7 @@ module.exports = function (grunt) {
       { "Name": "SocketIoClientDotNet.net40", "NuGetDir": "net40", "SourceDir": "" },
       { "Name": "SocketIoClientDotNet.net45", "NuGetDir": "net45", "SourceDir": "" },
       { "Name": "SocketIoClientDotNet.windowsphone8", "NuGetDir": "windowsphone8", "SourceDir": "" },
-      { "Name": "SocketIoClientDotNet.Xamarin-iOS", "NuGetDir": "xamarinios10", "SourceDir": "xamarinios10" },
+      { "Name": "SocketIoClientDotNet.Xamarin-iOS", "NuGetDir": "portable-Xamarin.iOS10+Xamarin.Mac20", "SourceDir": "xamarinios10" },
       { "Name": "SocketIoClientDotNet.Xamarin-MonoTouch", "NuGetDir": "monotouch10", "SourceDir": "monotouch10" },
       { "Name": "SocketIoClientDotNet.Xamarin-Android", "NuGetDir": "monoandroid10", "SourceDir": "", copyOnly: true },
       { "Name": "SocketIoClientDotNet.netcore45", "NuGetDir": "netcore45","SourceDir": "", copyOnly: true  },
