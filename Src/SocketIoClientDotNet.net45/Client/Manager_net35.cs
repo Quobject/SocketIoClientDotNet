@@ -244,14 +244,18 @@ namespace Quobject.SocketIoClientDotNet.Client
                     log2.Info("Manager Open finish");
 
                 }, timeout);
-
-                Subs.Enqueue(new On.ActionHandleImpl(timer.Stop));
-                ;
+                lock (Subs)
+                {
+                    Subs.Enqueue(new On.ActionHandleImpl(timer.Stop));
+                }
 
             }
 
-            Subs.Enqueue(openSub);
-            Subs.Enqueue(errorSub);
+            lock (Subs)
+            {
+                Subs.Enqueue(openSub);
+                Subs.Enqueue(errorSub);
+            }
             EngineSocket.Open();
 
             return this;
@@ -280,25 +284,38 @@ namespace Quobject.SocketIoClientDotNet.Client
                     Ondata((byte[])data);
                 }
             }));
-            Subs.Enqueue(sub);
+            lock (Subs)
+            {
+                Subs.Enqueue(sub);
+            }
 
             sub = Client.On.Create(this.Decoder, Parser.Parser.Decoder.EVENT_DECODED, new ListenerImpl((data) =>
             {
                 OnDecoded((Parser.Packet)data);
             }));
-            Subs.Enqueue(sub);
+            lock (Subs)
+            {
+                Subs.Enqueue(sub);
+            }
 
             sub = Client.On.Create(socket, Engine.EVENT_ERROR, new ListenerImpl((data) =>
             {
                 OnError((Exception) data);
             }));
-            Subs.Enqueue(sub);
+            lock (Subs)
+            {
+                Subs.Enqueue(sub);
+            }
 
             sub = Client.On.Create(socket, Engine.EVENT_CLOSE, new ListenerImpl((data) =>
             {
                 OnClose((string) data);
             }));
-            Subs.Enqueue(sub);
+
+            lock (Subs)
+            {
+                Subs.Enqueue(sub);
+            }
 
 
         }
@@ -396,9 +413,12 @@ namespace Quobject.SocketIoClientDotNet.Client
 
         private void Cleanup()
         {
-            foreach (var sub in Subs)
+            lock (Subs)
             {
-                sub.Destroy();
+                foreach (var sub in Subs)
+                {
+                    sub.Destroy();
+                }
             }
         }
 
