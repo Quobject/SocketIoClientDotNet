@@ -492,7 +492,9 @@ namespace Quobject.SocketIoClientDotNet.Client
                     log2.Info("EasyTimer Reconnect finish");
                 }, (int)delay);
 
-                Subs.Enqueue(new On.ActionHandleImpl(timer.Stop));                
+				lock (Subs){
+					Subs.Enqueue(new On.ActionHandleImpl(timer.Stop));                
+				}
             }
         }
 
