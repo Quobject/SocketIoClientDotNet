@@ -192,7 +192,8 @@ namespace Quobject.SocketIoClientDotNet.Parser
             var newData1 = new JObject();
             var _data1 = (JObject)data;
 
-            if ((bool) _data1[KEY_PLACEHOLDER])
+            //if ((bool) _data1[KEY_PLACEHOLDER])
+            if (_data1.SelectToken(KEY_PLACEHOLDER) != null && (bool) _data1[KEY_PLACEHOLDER])
             {
                 var num = (int)_data1[KEY_NUM];
                 return num >= 0 && num < buffers.Length ? buffers[num] : null;
