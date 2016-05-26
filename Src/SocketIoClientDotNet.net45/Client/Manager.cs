@@ -397,7 +397,9 @@ namespace Quobject.SocketIoClientDotNet.Client
         {
             foreach (var sub in Subs)
             {
-                sub.Destroy();
+                lock (Subs) {
+                    sub.Destroy();
+                }
             }
         }
 
