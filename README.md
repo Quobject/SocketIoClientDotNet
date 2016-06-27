@@ -3,7 +3,7 @@
 
 Socket.IO Client Library for .Net
 
-* NuGet Package: [![SocketIoClientDotNet](https://img.shields.io/nuget/dt/SocketIoClientDotNet.svg)](https://www.nuget.org/packages/SocketIoClientDotNet/)
+* NuGet Package: [![SocketIoClientDotNet](https://img.shields.io/nuget/v/SocketIoClientDotNet.svg?maxAge=2592000)](https://www.nuget.org/packages/SocketIoClientDotNet/)
 
 This is the Socket.IO Client Library for C#, which is ported from the [JavaScript client](https://github.com/Automattic/socket.io-client) version [1.1.0](https://github.com/socketio/socket.io-client/releases/tag/1.1.0).
 
