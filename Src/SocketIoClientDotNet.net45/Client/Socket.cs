@@ -362,16 +362,21 @@ namespace Quobject.SocketIoClientDotNet.Client
 
         public Socket Close()
         {
-            if (!Connected)
-            {
-                return this;
-            }
             var log = LogManager.GetLogger(Global.CallerName());
 
-            log.Info(string.Format("performing disconnect ({0})", Nsp));
-            Packet(new Packet(Parser.Parser.DISCONNECT));
+            if (Connected)
+            {
+                log.Info(string.Format("performing disconnect ({0})", Nsp));
+                Packet(new Packet(Parser.Parser.DISCONNECT));
+            }
+
             Destroy();
-            OnClose("io client disconnect");
+
+            if (Connected)
+            {
+                OnClose("io client disconnect");
+            }
+
             return this;
         }
 
