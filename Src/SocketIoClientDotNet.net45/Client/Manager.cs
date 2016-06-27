@@ -202,6 +202,7 @@ namespace Quobject.SocketIoClientDotNet.Client
 
             ReadyState = ReadyStateEnum.OPENING;
             OpeningSockets.Add(Socket(Uri.PathAndQuery));
+            SkipReconnect = false;
 
             var openSub = SocketIoClientDotNet.Client.On.Create(socket, Engine.EVENT_OPEN, new ListenerImpl(() =>
             {
@@ -404,6 +405,7 @@ namespace Quobject.SocketIoClientDotNet.Client
         public void Close()
         {
             this.SkipReconnect = true;
+            this.Reconnecting = false;
 
             if (ReadyState != ReadyStateEnum.OPEN)
             {
@@ -437,7 +439,7 @@ namespace Quobject.SocketIoClientDotNet.Client
         {
             var log = LogManager.GetLogger(Global.CallerName());
 
-            if (Reconnecting)
+            if (Reconnecting || SkipReconnect)
             {
                 return;
             }
