@@ -42,13 +42,13 @@ namespace Quobject.SocketIoClientDotNet.Client
         private long _reconnectionDelay;
         private long _reconnectionDelayMax;
         private long _timeout;
-        private int Connected;
         private int Attempts;
         private Uri Uri;
         private List<Parser.Packet> PacketBuffer;
         private Queue<On.IHandle> Subs;
         private Quobject.EngineIoClientDotNet.Client.Socket.Options Opts;
         private bool AutoConnect;
+        private HashSet<Socket> OpeningSockets;
         /*package*/
 
         public Quobject.EngineIoClientDotNet.Client.Socket EngineSocket;
@@ -95,10 +95,10 @@ namespace Quobject.SocketIoClientDotNet.Client
             this.Timeout(opts.Timeout < 0 ? 20000 : opts.Timeout);
             this.ReadyState = ReadyStateEnum.CLOSED;
             this.Uri = uri;
-            this.Connected = 0;
             this.Attempts = 0;
             this.Encoding = false;
             this.PacketBuffer = new List<Parser.Packet>();
+            this.OpeningSockets = new HashSet<Socket>();
             this.Encoder = new Parser.Parser.Encoder();
             this.Decoder = new Parser.Parser.Decoder();
             this.AutoConnect = opts.AutoConnect;
@@ -201,6 +201,8 @@ namespace Quobject.SocketIoClientDotNet.Client
             Quobject.EngineIoClientDotNet.Client.Socket socket = EngineSocket;
 
             ReadyState = ReadyStateEnum.OPENING;
+            OpeningSockets.Add(Socket(Uri.PathAndQuery));
+            SkipReconnect = false;
 
             var openSub = SocketIoClientDotNet.Client.On.Create(socket, Engine.EVENT_OPEN, new ListenerImpl(() =>
             {
@@ -333,17 +335,14 @@ namespace Quobject.SocketIoClientDotNet.Client
 
             var socket = new Socket(this,nsp);
             Nsps = Nsps.Add(nsp, socket);
-            socket.On(Client.Socket.EVENT_CONNECT, new ListenerImpl(() =>
-            {
-                Connected++;
-            }));
+
             return socket;
         }
 
         internal void Destroy(Socket socket)
         {
-            --Connected;
-            if (Connected == 0)
+            OpeningSockets.Remove(socket);
+            if (OpeningSockets.Count == 0)
             {
                 Close();
             }
@@ -406,7 +405,19 @@ namespace Quobject.SocketIoClientDotNet.Client
         public void Close()
         {
             this.SkipReconnect = true;
-            this.EngineSocket.Close();
+            this.Reconnecting = false;
+
+            if (ReadyState != ReadyStateEnum.OPEN)
+            {
+                Cleanup();
+            }
+
+            ReadyState = ReadyStateEnum.CLOSED;
+
+            if (EngineSocket != null)
+            {
+                this.EngineSocket.Close();
+            }
         }
 
 
@@ -428,7 +439,7 @@ namespace Quobject.SocketIoClientDotNet.Client
         {
             var log = LogManager.GetLogger(Global.CallerName());
 
-            if (Reconnecting)
+            if (Reconnecting || SkipReconnect)
             {
                 return;
             }
