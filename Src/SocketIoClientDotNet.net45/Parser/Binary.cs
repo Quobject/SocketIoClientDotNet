@@ -161,8 +161,7 @@ namespace Quobject.SocketIoClientDotNet.Parser
                             //newData[i] = (string) recValue;
                             newData.Add((string)recValue);
                         }
-
-                        if (recValue is byte[])
+                        else if (recValue is byte[])
                         {
                             newData.Add((byte[])recValue);
                         }
@@ -204,7 +203,11 @@ namespace Quobject.SocketIoClientDotNet.Parser
                 try
                 {
                     var recValue = _reconstructPacket(property.Value, buffers);
-                    if (recValue is byte[])
+                    if (recValue is string)
+                    {
+                        newData1[property.Name] = (string)recValue;
+                    }
+                    else if (recValue is byte[])
                     {
                         newData1[property.Name] = (byte[])recValue;
                     }
