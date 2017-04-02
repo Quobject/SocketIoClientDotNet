@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>SocketIoClientDotNet</id>
+    <version>@VERSION@-beta1</version>
+    <title>SocketIoClientDotNet</title>
+    <authors>Matthias Ludwig</authors>
+    <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <dependencies>
+      <group targetFramework="netcore45">
+        <dependency id="Newtonsoft.Json" version="8.0.1" />
+        <dependency id="EngineIoClientDotNet" version="0.9.22" />
+      </group>
+      <group targetFramework="portable-wpa81+wp81">
+        <dependency id="Newtonsoft.Json" version="8.0.1" />
+        <dependency id="EngineIoClientDotNet" version="0.9.22" />
+      </group>
+      <group targetFramework="net35">
+        <dependency id="WebSocket4Net" version="0.14.1" />
+        <dependency id="Newtonsoft.Json" version="8.0.1" />
+        <dependency id="System.Threading.Tasks.Unofficial" version="3.1.0" />
+        <dependency id="EngineIoClientDotNet" version="0.9.22" />
+      </group>
+      <group targetFramework="net40">
+        <dependency id="WebSocket4Net" version="0.14.1" />
+        <dependency id="Newtonsoft.Json" version="8.0.1" />
+        <dependency id="EngineIoClientDotNet" version="0.9.22" />
+      </group>
+      <group targetFramework="net45">
+        <dependency id="WebSocket4Net" version="0.14.1" />
+        <dependency id="Newtonsoft.Json" version="8.0.1" />
+        <dependency id="EngineIoClientDotNet" version="0.9.22" />
+      </group>
+      <group targetFramework="windowsphone8">
+        <dependency id="WebSocket4Net" version="0.12" />
+        <dependency id="Newtonsoft.Json" version="8.0.1" />
+        <dependency id="EngineIoClientDotNet" version="0.9.22" />
+      </group>
+      <group targetFramework="monoandroid10">
+        <dependency id="WebSocket4Net" version="0.14.1" />
+        <dependency id="Newtonsoft.Json" version="8.0.1" />
+        <dependency id="EngineIoClientDotNet" version="0.9.22" />
+      </group>
+      <group targetFramework="xamarinios10">
+        <dependency id="WebSocket4Net" version="0.14.1" />
+        <dependency id="Newtonsoft.Json" version="8.0.1" />
+        <dependency id="EngineIoClientDotNet" version="0.9.22" />
+      </group>
+      <group targetFramework="Xamarin.Mac20">
+        <dependency id="WebSocket4Net" version="0.14.1" />
+        <dependency id="Newtonsoft.Json" version="8.0.1" />
+        <dependency id="EngineIoClientDotNet" version="0.9.22" />
+      </group>
+      <group targetFramework="monotouch10">
+        <dependency id="WebSocket4Net" version="0.14.1" />
+        <dependency id="Newtonsoft.Json" version="8.0.1" />
+        <dependency id="EngineIoClientDotNet" version="0.9.22" />
+      </group>
+
+    </dependencies>
+    <projectUrl>https://github.com/Quobject/SocketIoClientDotNet/</projectUrl>
+    <description>This is the Socket.IO Client Library for .NET.</description>
+    <summary>This library supports all of the features the JS client does, including events, options and upgrading transport. SocketIoClientDotNet has a similar api to those of the JavaScript client.</summary>
+    <tags>socket.io.client</tags>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Web" targetFramework="net45" />
+    </frameworkAssemblies>
+  </metadata>
+</package>

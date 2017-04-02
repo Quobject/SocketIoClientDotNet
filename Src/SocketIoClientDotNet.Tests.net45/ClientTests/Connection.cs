@@ -59,7 +59,7 @@ namespace SocketIoClientDotNet.Tests.ClientTests
 
         public static ConfigBase Load()
         {
-            var configString = File.ReadAllText("./../../../../grunt/config.json");
+            var configString = File.ReadAllText("config.json");
 
             var config = JsonConvert.DeserializeObject<ConfigBase>(configString);
             return config;

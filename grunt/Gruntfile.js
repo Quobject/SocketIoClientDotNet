@@ -6,16 +6,16 @@ module.exports = function (grunt) {
     util = require('util'),
     os = node_os.platform() === 'win32' ? 'win' : 'linux',
     nuget_builds = [
-      { "Name": "SocketIoClientDotNet.net35", "NuGetDir": "net35", "SourceDir": "" },
+      { "Name": "SocketIoClientDotNet.net35", "NuGetDir": "net35", "SourceDir": "net35" },
       { "Name": "SocketIoClientDotNet.net40", "NuGetDir": "net40", "SourceDir": "" },
-      { "Name": "SocketIoClientDotNet.net45", "NuGetDir": "net45", "SourceDir": "" },
-      { "Name": "SocketIoClientDotNet.windowsphone8", "NuGetDir": "windowsphone8", "SourceDir": "" },
-      { "Name": "SocketIoClientDotNet.Xamarin-iOS", "NuGetDir": "portable-Xamarin.iOS10+Xamarin.Mac20", "SourceDir": "xamarinios10" },
-      { "Name": "SocketIoClientDotNet.Xamarin-MonoTouch", "NuGetDir": "monotouch10", "SourceDir": "monotouch10" },
-      { "Name": "SocketIoClientDotNet.Xamarin-Android", "NuGetDir": "monoandroid10", "SourceDir": "", copyOnly: true },
+      { "Name": "SocketIoClientDotNet.net45", "NuGetDir": "net45", "SourceDir": "net45" },
+      { "Name": "SocketIoClientDotNet.windowsphone8", "NuGetDir": "windowsphone8", "SourceDir": "windowsphone8" },
       { "Name": "SocketIoClientDotNet.netcore45", "NuGetDir": "netcore45","SourceDir": "", copyOnly: true  },
       { "Name": "SocketIoClientDotNet.portable-wpa81+wp81", "NuGetDir": "portable-wpa81+wp81", "SourceDir": "", copyOnly: true },
-      { "Name": "SocketIoClientDotNet.portable-win81+wpa81", "NuGetDir": "portable-win81+wpa81",  "SourceDir": "" }
+      { "Name": "SocketIoClientDotNet.portable-win81+wpa81", "NuGetDir": "portable-win81+wpa81", "SourceDir": "" },
+      //{ "Name": "SocketIoClientDotNet.Xamarin-iOS", "NuGetDir": "portable-Xamarin.iOS10+Xamarin.Mac20", "SourceDir": "xamarinios10" },
+      //{ "Name": "SocketIoClientDotNet.Xamarin-MonoTouch", "NuGetDir": "monotouch10", "SourceDir": "monotouch10" },
+      //{ "Name": "SocketIoClientDotNet.Xamarin-Android", "NuGetDir": "monoandroid10", "SourceDir": "", copyOnly: true },
     ];
 
   grunt.log.writeln(util.inspect(config));
