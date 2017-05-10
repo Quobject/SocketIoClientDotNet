@@ -3,6 +3,7 @@ using Quobject.EngineIoClientDotNet.ComponentEmitter;
 using Quobject.EngineIoClientDotNet.Modules;
 using Quobject.EngineIoClientDotNet.Thread;
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Text;
 
@@ -45,7 +46,7 @@ namespace Quobject.SocketIoClientDotNet.Client
         private int Attempts;
         private Uri Uri;
         private List<Parser.Packet> PacketBuffer;
-        private Queue<On.IHandle> Subs;
+        private ConcurrentQueue<On.IHandle> Subs;
         private Quobject.EngineIoClientDotNet.Client.Socket.Options Opts;
         private bool AutoConnect;
         private HashSet<Socket> OpeningSockets;
@@ -87,7 +88,7 @@ namespace Quobject.SocketIoClientDotNet.Client
             }
             this.Opts = opts;
             this.Nsps = ImmutableDictionary.Create<string, Socket>();
-            this.Subs = new Queue<On.IHandle>();
+            this.Subs = new ConcurrentQueue<On.IHandle>();
             this.Reconnection(opts.Reconnection);
             this.ReconnectionAttempts(opts.ReconnectionAttempts != 0 ? opts.ReconnectionAttempts : int.MaxValue);
             this.ReconnectionDelay(opts.ReconnectionDelay != 0 ? opts.ReconnectionDelay : 1000);
@@ -394,11 +395,11 @@ namespace Quobject.SocketIoClientDotNet.Client
 
         private void Cleanup()
         {
+            // Concurrent-queue makes a copy when calling GetEnumerator
+            // which protects it from any changes done in Subs while calling destroy
             foreach (var sub in Subs)
             {
-                lock (Subs) {
-                    sub.Destroy();
-                }
+                sub.Destroy();
             }
         }
 
