@@ -419,6 +419,7 @@ namespace Quobject.SocketIoClientDotNet.Client
                 {
                     sub.Destroy();
                 }
+                Subs.Clear();
             }
         }
 
