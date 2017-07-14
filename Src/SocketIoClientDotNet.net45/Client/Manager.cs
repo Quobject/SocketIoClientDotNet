@@ -401,6 +401,10 @@ namespace Quobject.SocketIoClientDotNet.Client
             {
                 sub.Destroy();
             }
+
+            // dequeue until empty (ConcurrentQueue does not have a Clear() method)
+            On.IHandle tmp;
+            while (Subs.TryDequeue(out tmp));
         }
 
         public void Close()
