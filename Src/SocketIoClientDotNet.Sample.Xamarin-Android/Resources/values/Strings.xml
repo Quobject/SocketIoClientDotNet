@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-  <string name="ApplicationName">Socket.IO Chat</string>
-  <string name="UsernameHint">Enter username...</string>
-  <string name="LoginButton">Login</string>
-  <string name="EntryHint">Enter text...</string>
-  <string name="SendButton">Send</string>
-</resources>
