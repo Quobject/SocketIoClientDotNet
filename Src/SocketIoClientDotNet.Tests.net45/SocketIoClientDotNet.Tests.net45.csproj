@@ -33,15 +33,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EngineIoClientDotNet, Version=0.9.22.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\SocketIoClientDotNet.net45\packages\EngineIoClientDotNet.0.9.22\lib\net45\EngineIoClientDotNet.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="EngineIoClientDotNet, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\SocketIoClientDotNet.net45\packages\EngineIoClientDotNet.1.0.0.1-beta1\lib\net45\EngineIoClientDotNet.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\SocketIoClientDotNet.net45\packages\Newtonsoft.Json.8.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\SocketIoClientDotNet.net45\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperSocket.ClientEngine, Version=0.8.0.12, Culture=neutral, PublicKeyToken=ee9af13f57f00acc, processorArchitecture=MSIL">
+      <HintPath>..\SocketIoClientDotNet.net45\packages\SuperSocket.ClientEngine.Core.0.8.0.12\lib\net45\SuperSocket.ClientEngine.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Collections.Immutable, Version=1.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\SocketIoClientDotNet.net45\packages\System.Collections.Immutable.1.3.1\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
@@ -49,9 +53,8 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="WebSocket4Net, Version=0.14.1.0, Culture=neutral, PublicKeyToken=eb4e154b696bf72a, processorArchitecture=MSIL">
-      <HintPath>..\SocketIoClientDotNet.net45\packages\WebSocket4Net.0.14.1\lib\net45\WebSocket4Net.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="WebSocket4Net, Version=0.15.0.9, Culture=neutral, PublicKeyToken=eb4e154b696bf72a, processorArchitecture=MSIL">
+      <HintPath>..\SocketIoClientDotNet.net45\packages\WebSocket4Net.0.15.0-beta9\lib\net45\WebSocket4Net.dll</HintPath>
     </Reference>
     <Reference Include="xunit.abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
       <HintPath>..\SocketIoClientDotNet.net45\packages\xunit.abstractions.2.0.0\lib\net35\xunit.abstractions.dll</HintPath>
@@ -72,6 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClientTests\Connection.cs" />
+    <Compile Include="ClientTests\ConnectionConstants.cs" />
     <Compile Include="ClientTests\ServerConnectionTest.cs" />
     <Compile Include="ClientTests\UrlTest.cs" />
     <Compile Include="ModuleTests\HasBinaryDataTest.cs" />

@@ -1,5 +1,5 @@
 ﻿using Newtonsoft.Json.Linq;
-using Quobject.Collections.Immutable;
+using System.Collections.Immutable;
 using Quobject.EngineIoClientDotNet.Client;
 using Quobject.EngineIoClientDotNet.Client.Transports;
 using Quobject.EngineIoClientDotNet.ComponentEmitter;

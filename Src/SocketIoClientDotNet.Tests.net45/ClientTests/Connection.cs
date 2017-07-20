@@ -59,10 +59,15 @@ namespace SocketIoClientDotNet.Tests.ClientTests
 
         public static ConfigBase Load()
         {
-            var configString = File.ReadAllText("config.json");
+            var result = new ConfigBase()
+            {
+                server = new ConfigServer()
+            };
+            result.server.hostname = ConnectionConstants.HOSTNAME;
+            result.server.port = ConnectionConstants.PORT;
+            result.server.ssl_port = ConnectionConstants.SSL_PORT;
 
-            var config = JsonConvert.DeserializeObject<ConfigBase>(configString);
-            return config;
+            return result;
         }
     }
 

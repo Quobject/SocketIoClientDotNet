@@ -48,7 +48,9 @@
     }
 
     for (i = 0; i < nuget_builds.length; i++) {
-      addBuildWithTitle(nuget_builds[i].Name, nuget_builds[i].NuGetDir, nuget_builds[i].copyOnly);
+      if (nuget_builds[i].Name !== 'SocketIoClientDotNet.netstandard1.3') {
+        addBuildWithTitle(nuget_builds[i].Name, nuget_builds[i].NuGetDir, nuget_builds[i].copyOnly);
+      }
     }      
 
     grunt.log.writeln('tasks = %s', JSON.stringify(tasks));
