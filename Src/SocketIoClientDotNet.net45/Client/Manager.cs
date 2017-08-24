@@ -395,16 +395,11 @@ namespace Quobject.SocketIoClientDotNet.Client
 
         private void Cleanup()
         {
-            // Concurrent-queue makes a copy when calling GetEnumerator
-            // which protects it from any changes done in Subs while calling destroy
-            foreach (var sub in Subs)
+            // dequeue and destroy until empty
+            while (Subs.TryDequeue(out On.IHandle sub))
             {
                 sub.Destroy();
             }
-
-            // dequeue until empty (ConcurrentQueue does not have a Clear() method)
-            On.IHandle tmp;
-            while (Subs.TryDequeue(out tmp));
         }
 
         public void Close()
