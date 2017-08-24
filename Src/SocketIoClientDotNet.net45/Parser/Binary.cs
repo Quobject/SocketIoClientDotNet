@@ -25,66 +25,70 @@ namespace Quobject.SocketIoClientDotNet.Parser
 
         private static JToken _deconstructPacket(object data, List<byte[]> buffers)
         {
-            if (data == null) return null;
+            if (data == null)
+            {
+                return null;
+            }
 
             if (data is byte[])
             {
-                var byteArray = (byte[]) data;
+                var byteArray = (byte[])data;
                 return AddPlaceholder(buffers, byteArray);
             }
-            if (data is JArray)
-            {
-                var newData = new JArray();
-                var _data = (JArray) data;
-                int len = _data.Count;
-                for (int i = 0; i < len; i ++)
-                {
-                    try
-                    {
-                        newData.Add( _deconstructPacket(_data[i], buffers));                        
-                    }
-                    catch (Exception)
-                    {
-                        return null;
-                    }
-                }
-                return newData;
-            }
-            if (!(data is JToken))
+
+            var jToken = data as JToken;
+            if (jToken == null)
             {
                 throw new NotImplementedException();
             }
-            var jtoken = (JToken) data;
-            if (jtoken.Type == JTokenType.String)
-            {
-                return jtoken.Value<string>();
-            }
-            else if (jtoken.Type == JTokenType.Bytes)
-            {
-                var byteArray = jtoken.Value<byte[]>();
-                return AddPlaceholder(buffers, byteArray);
-            }
-            else if (jtoken.Type == JTokenType.Object)
-            {
 
-                var newData2 = new JObject();
-                var _data2 = (JObject)jtoken;
-
-                foreach (var property in _data2.Properties())
-                {
-                    try
+            switch (jToken.Type)
+            {
+                case JTokenType.Object:
+                    var newJObject = new JObject();
+                    var jObject = (JObject)jToken;
+                    foreach (var property in jObject.Properties())
                     {
-                        newData2[property.Name] = _deconstructPacket(property.Value, buffers);
+                        try
+                        {
+                            newJObject[property.Name] = _deconstructPacket(property.Value, buffers);
+                        }
+                        catch (Exception)
+                        {
+                            return null;
+                        }
                     }
-                    catch (Exception)
-                    {
-                        return null;
-                    }
+                    return newJObject;
 
-                }
-                return newData2;
+                case JTokenType.Array:
+                    var newJArray = new JArray();
+                    var jArray = (JArray)jToken;
+                    for (int i = 0; i < jArray.Count; i++)
+                    {
+                        try
+                        {
+                            newJArray.Add(_deconstructPacket(jArray[i], buffers));
+                        }
+                        catch (Exception)
+                        {
+                            return null;
+                        }
+                    }
+                    return newJArray;
+
+                case JTokenType.Bytes:
+                    var byteArray = jToken.Value<byte[]>();
+                    return AddPlaceholder(buffers, byteArray);
+
+                case JTokenType.None:
+                case JTokenType.Constructor:
+                case JTokenType.Property:
+                case JTokenType.Comment:
+                    throw new NotImplementedException();
+
+                default:
+                    return jToken;
             }
-            throw new NotImplementedException();
         }
 
         private static JToken AddPlaceholder(List<byte[]> buffers, byte[] byteArray)
