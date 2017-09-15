@@ -171,15 +171,23 @@ namespace Quobject.SocketIoClientDotNet.Client
         {
             return Emit(eventString, new AckImpl(ack), args);
         }
+
         public Emitter Emit(string eventString, Action<object> ack, params object[] args)
         {
             return Emit(eventString, new AckImpl(ack), args);
         }
+
         public Emitter Emit(string eventString, Action<object, object> ack, params object[] args)
         {
             return Emit(eventString, new AckImpl(ack), args);
         }
+
         public Emitter Emit(string eventString, Action<object, object, object> ack, params object[] args)
+        {
+            return Emit(eventString, new AckImpl(ack), args);
+        }
+
+        public Emitter Emit(string eventString, Action<object, object, object, object> ack, params object[] args)
         {
             return Emit(eventString, new AckImpl(ack), args);
         }
