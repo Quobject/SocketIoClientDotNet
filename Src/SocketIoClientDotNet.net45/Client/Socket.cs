@@ -104,7 +104,7 @@ namespace Quobject.SocketIoClientDotNet.Client
                 return this;
             }
 
-            var _args = new List<object> {eventString};
+            var _args = new List<object> { eventString };
             _args.AddRange(args);
 
             var jsonArgs = Parser.Packet.Args2JArray(_args);
@@ -138,20 +138,32 @@ namespace Quobject.SocketIoClientDotNet.Client
         {
             var log = LogManager.GetLogger(Global.CallerName());
 
-            var _args = new List<object> { eventString };
-            if (args != null)
+            if (Events.Contains(eventString))
             {
-                _args.AddRange(args);                
+                base.Emit(eventString, args);
+                return this;
             }
 
-            var jarray = new JArray(_args);
-            var packet = new Packet(Parser.Parser.EVENT, jarray);
+            var _args = new List<object> { eventString };
+            _args.AddRange(args);
+
+            var jsonArgs = Parser.Packet.Args2JArray(_args);
+
+            var parserType = HasBinaryData.HasBinary(jsonArgs) ? Parser.Parser.BINARY_EVENT : Parser.Parser.EVENT;
+            var packet = new Packet(parserType, jsonArgs);
 
             log.Info(string.Format("emitting packet with ack id {0}", Ids));
             Acks = Acks.Add(Ids, ack);
             packet.Id = Ids++;
 
-            Packet(packet);
+            if (Connected)
+            {
+                Packet(packet);
+            }
+            else
+            {
+                SendBuffer = SendBuffer.Enqueue(packet);
+            }
             return this;
         }
 
@@ -159,15 +171,23 @@ namespace Quobject.SocketIoClientDotNet.Client
         {
             return Emit(eventString, new AckImpl(ack), args);
         }
+
         public Emitter Emit(string eventString, Action<object> ack, params object[] args)
         {
             return Emit(eventString, new AckImpl(ack), args);
         }
+
         public Emitter Emit(string eventString, Action<object, object> ack, params object[] args)
         {
             return Emit(eventString, new AckImpl(ack), args);
         }
+
         public Emitter Emit(string eventString, Action<object, object, object> ack, params object[] args)
+        {
+            return Emit(eventString, new AckImpl(ack), args);
+        }
+
+        public Emitter Emit(string eventString, Action<object, object, object, object> ack, params object[] args)
         {
             return Emit(eventString, new AckImpl(ack), args);
         }
