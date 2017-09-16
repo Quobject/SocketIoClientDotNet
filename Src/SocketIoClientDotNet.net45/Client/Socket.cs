@@ -107,18 +107,21 @@ namespace Quobject.SocketIoClientDotNet.Client
             var _args = new List<object> { eventString };
             _args.AddRange(args);
 
+            var ack = _args[_args.Count - 1] as IAck;
+            if (ack != null)
+            {
+                _args.RemoveAt(_args.Count - 1);
+            }
+
             var jsonArgs = Parser.Packet.Args2JArray(_args);
 
             var parserType = HasBinaryData.HasBinary(jsonArgs) ? Parser.Parser.BINARY_EVENT : Parser.Parser.EVENT;
             var packet = new Packet(parserType, jsonArgs);
 
-            var lastArg = _args[_args.Count - 1];
-            if (lastArg is IAck)
+            if (ack != null)
             {
                 log.Info(string.Format("emitting packet with ack id {0}", Ids));
-                Acks = Acks.Add(Ids, (IAck)lastArg);
-                jsonArgs = Parser.Packet.Remove(jsonArgs, jsonArgs.Count - 1);
-                packet.Data = jsonArgs;
+                Acks = Acks.Add(Ids, ack);
                 packet.Id = Ids++;
             }
 
