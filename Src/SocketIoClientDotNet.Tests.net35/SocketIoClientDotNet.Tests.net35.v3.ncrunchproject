@@ -1,0 +1,19 @@
+﻿<ProjectConfiguration>
+  <Settings>
+    <IgnoredTests>
+      <FixtureTestSelector>
+        <FixtureName>SocketIoClientDotNet.Tests.ParserTests.ByteArrayTest</FixtureName>
+      </FixtureTestSelector>
+      <FixtureTestSelector>
+        <FixtureName>SocketIoClientDotNet.Tests.ModuleTests.HasBinaryDataTest</FixtureName>
+      </FixtureTestSelector>
+      <FixtureTestSelector>
+        <FixtureName>SocketIoClientDotNet.Tests.ClientTests.UrlTest</FixtureName>
+      </FixtureTestSelector>
+      <FixtureTestSelector>
+        <FixtureName>SocketIoClientDotNet.Tests.ClientTests.ServerConnectionTest</FixtureName>
+      </FixtureTestSelector>
+    </IgnoredTests>
+    <PreviouslyBuiltSuccessfully>True</PreviouslyBuiltSuccessfully>
+  </Settings>
+</ProjectConfiguration>

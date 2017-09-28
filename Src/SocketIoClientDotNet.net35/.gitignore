@@ -305,4 +305,5 @@ __pycache__/
 OpenCover/
 EngineIoClientDotNet_Tests/Resources/test.xml
 TestServer/test.xml
-Working/
+TestServer/test.xml
+TestServer/test.xml
