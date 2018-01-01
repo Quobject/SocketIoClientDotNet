@@ -33,14 +33,14 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EngineIoClientDotNet, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\SocketIoClientDotNet.net40\packages\EngineIoClientDotNet.1.0.3\lib\net40\EngineIoClientDotNet.dll</HintPath>
+    <Reference Include="EngineIoClientDotNet, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\SocketIoClientDotNet.net40\packages\EngineIoClientDotNet.1.0.4\lib\net40\EngineIoClientDotNet.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\SocketIoClientDotNet.net40\packages\Newtonsoft.Json.10.0.3\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="SuperSocket.ClientEngine, Version=0.8.0.13, Culture=neutral, PublicKeyToken=ee9af13f57f00acc, processorArchitecture=MSIL">
-      <HintPath>..\SocketIoClientDotNet.net40\packages\SuperSocket.ClientEngine.Core.0.8.0.13\lib\net40-client\SuperSocket.ClientEngine.dll</HintPath>
+    <Reference Include="SuperSocket.ClientEngine, Version=0.9.0.0, Culture=neutral, PublicKeyToken=ee9af13f57f00acc, processorArchitecture=MSIL">
+      <HintPath>..\SocketIoClientDotNet.net40\packages\SuperSocket.ClientEngine.Core.0.9.0\lib\net40-client\SuperSocket.ClientEngine.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -50,8 +50,8 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="WebSocket4Net, Version=0.15.0.9, Culture=neutral, PublicKeyToken=eb4e154b696bf72a, processorArchitecture=MSIL">
-      <HintPath>..\SocketIoClientDotNet.net40\packages\WebSocket4Net.0.15.0\lib\net40\WebSocket4Net.dll</HintPath>
+    <Reference Include="WebSocket4Net, Version=0.15.1.10, Culture=neutral, PublicKeyToken=eb4e154b696bf72a, processorArchitecture=MSIL">
+      <HintPath>..\SocketIoClientDotNet.net40\packages\WebSocket4Net.0.15.1\lib\net40\WebSocket4Net.dll</HintPath>
     </Reference>
     <Reference Include="xunit, Version=1.9.2.1705, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
       <HintPath>..\SocketIoClientDotNet.net40\packages\xunit.1.9.2\lib\net20\xunit.dll</HintPath>

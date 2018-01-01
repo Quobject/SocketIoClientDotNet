@@ -1,5 +1,29 @@
 ﻿<ProjectConfiguration>
   <Settings>
+    <IgnoredTests>
+      <FixtureTestSelector>
+        <FixtureName>SocketIoClientDotNet.Tests.ParserTests.ParserTest</FixtureName>
+      </FixtureTestSelector>
+      <NamedTestSelector>
+        <TestName>SocketIoClientDotNet.Tests.ClientTests.ServerConnectionTest.D100000CharsTest</TestName>
+      </NamedTestSelector>
+      <NamedTestSelector>
+        <TestName>SocketIoClientDotNet.Tests.ClientTests.ServerConnectionTest.Json10000000CharsTest</TestName>
+      </NamedTestSelector>
+      <NamedTestSelector>
+        <TestName>SocketIoClientDotNet.Tests.ClientTests.ServerConnectionTest.Json10000CharsTest</TestName>
+      </NamedTestSelector>
+      <FixtureTestSelector>
+        <FixtureName>SocketIoClientDotNet.Tests.ParserTests.ByteArrayTest</FixtureName>
+      </FixtureTestSelector>
+      <FixtureTestSelector>
+        <FixtureName>SocketIoClientDotNet.Tests.ModuleTests.HasBinaryDataTest</FixtureName>
+      </FixtureTestSelector>
+      <FixtureTestSelector>
+        <FixtureName>SocketIoClientDotNet.Tests.ClientTests.UrlTest</FixtureName>
+      </FixtureTestSelector>
+      <AllTestsSelector />
+    </IgnoredTests>
     <PreviouslyBuiltSuccessfully>True</PreviouslyBuiltSuccessfully>
   </Settings>
 </ProjectConfiguration>

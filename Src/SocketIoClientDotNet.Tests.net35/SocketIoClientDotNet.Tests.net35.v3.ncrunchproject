@@ -2,6 +2,9 @@
   <Settings>
     <IgnoredTests>
       <FixtureTestSelector>
+        <FixtureName>SocketIoClientDotNet.Tests.ParserTests.ParserTest</FixtureName>
+      </FixtureTestSelector>
+      <FixtureTestSelector>
         <FixtureName>SocketIoClientDotNet.Tests.ParserTests.ByteArrayTest</FixtureName>
       </FixtureTestSelector>
       <FixtureTestSelector>
@@ -10,9 +13,7 @@
       <FixtureTestSelector>
         <FixtureName>SocketIoClientDotNet.Tests.ClientTests.UrlTest</FixtureName>
       </FixtureTestSelector>
-      <FixtureTestSelector>
-        <FixtureName>SocketIoClientDotNet.Tests.ClientTests.ServerConnectionTest</FixtureName>
-      </FixtureTestSelector>
+      <AllTestsSelector />
     </IgnoredTests>
     <PreviouslyBuiltSuccessfully>True</PreviouslyBuiltSuccessfully>
   </Settings>

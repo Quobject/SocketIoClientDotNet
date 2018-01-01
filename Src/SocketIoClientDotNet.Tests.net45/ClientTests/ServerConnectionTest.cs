@@ -1250,6 +1250,7 @@ namespace SocketIoClientDotNet.Tests.ClientTests
             Assert.Equal(10000000, str.Length);
         }
 
+        //Fails in .netstandard1.3 for SocketIoClientDotNet 1.0.4
         [Fact]
         public void Cookie()
         {
