@@ -9,7 +9,7 @@ module.exports = function (grunt) {
       { "Name": "SocketIoClientDotNet.net35", "NuGetDir": "net35", "SourceDir": "net35", copyOnly: true },
       { "Name": "SocketIoClientDotNet.net40", "NuGetDir": "net40", "SourceDir": "net40", copyOnly: true },
       { "Name": "SocketIoClientDotNet.net45", "NuGetDir": "net45", "SourceDir": "net45", copyOnly: true },
-      { "Name": "SocketIoClientDotNet.netstandard1.3", "NuGetDir": "netstandard1.3", "SourceDir": "netstandard1.3", "SourceFileName": "SocketIoClientDotNet.netstandard1.3.dll", copyOnly: true },
+     // { "Name": "SocketIoClientDotNet.netstandard1.3", "NuGetDir": "netstandard1.3", "SourceDir": "netstandard1.3", "SourceFileName": "SocketIoClientDotNet.netstandard1.3.dll", copyOnly: true },
     ];
 
   grunt.log.writeln(util.inspect(config));

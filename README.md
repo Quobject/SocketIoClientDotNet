@@ -42,7 +42,7 @@ More examples can be found in [unit tests](https://github.com/Quobject/SocketIoC
 This library supports all of the features the JS client does, including events, options and upgrading transport.
 
 ## Framework Versions
-.NETFramework v3.5, .NETFramework v4.0, .NETFramework v4.4, .NETStandard v1.3,
+.NETFramework v3.5, .NETFramework v4.0, .NETFramework v4.5
 
 ## License
 
