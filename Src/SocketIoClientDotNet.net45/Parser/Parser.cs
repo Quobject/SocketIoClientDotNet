@@ -97,7 +97,10 @@ namespace Quobject.SocketIoClientDotNet.Parser
                 if (obj.Data != null)
                 {
                     if (nsp) str.Append(",");
-                    str.Append(obj.Data);
+                    if ((obj.Data as JToken).HasValues)
+                    {
+                        str.Append(obj.Data);
+                    }
                 }
 
                 var log = LogManager.GetLogger(Global.CallerName());
