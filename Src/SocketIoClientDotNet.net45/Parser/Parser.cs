@@ -6,7 +6,6 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-
 namespace Quobject.SocketIoClientDotNet.Parser
 {
     public class Parser
