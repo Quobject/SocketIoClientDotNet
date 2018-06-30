@@ -58,15 +58,17 @@ namespace Quobject.SocketIoClientDotNet.Parser
             var args = new List<object>();
             foreach (var o in jarray)
             {
-                if (o is JValue jval)
+                if (o is JValue)
                 {
+                    var jval = (JValue)o;
                     if (jval != null)
                     {
                         args.Add(jval.Value);
                     }
                 }
-                else if (o is JToken jtoken)
+                else if (o is JToken)
                 {
+                    var jtoken = (JToken)o;
                     if (jtoken != null)
                     {
                         args.Add(jtoken);
@@ -83,15 +85,8 @@ namespace Quobject.SocketIoClientDotNet.Parser
             var jsonArgs = new JArray();
             foreach (var o in _args)
             {
-                if (!(o is string))
-                {
-                    var obj = JObject.FromObject(o);
-                    jsonArgs.Add(obj);
-                }
-                else
-                    jsonArgs.Add(o);
+                jsonArgs.Add(o);
             }
-
             return jsonArgs;
         }
 
@@ -108,5 +103,7 @@ namespace Quobject.SocketIoClientDotNet.Parser
             }
             return na;
         }
+
+
     }
 }
