@@ -1,5 +1,34 @@
 ﻿<ProjectConfiguration>
   <Settings>
+    <IgnoredTests>
+      <FixtureTestSelector>
+        <FixtureName>SocketIoClientDotNet.Tests.ModuleTests.HasBinaryDataTest</FixtureName>
+      </FixtureTestSelector>
+      <NamedTestSelector>
+        <TestName>SocketIoClientDotNet.Tests.ModuleTests.HasBinaryDataTest.ByteArray</TestName>
+      </NamedTestSelector>
+      <FixtureTestSelector>
+        <FixtureName>SocketIoClientDotNet.Tests.ParserTests.ByteArrayTest</FixtureName>
+      </FixtureTestSelector>
+      <FixtureTestSelector>
+        <FixtureName>SocketIoClientDotNet.Tests.ParserTests.ParserTest</FixtureName>
+      </FixtureTestSelector>
+      <FixtureTestSelector>
+        <FixtureName>SocketIoClientDotNet.Tests.ClientTests.UrlTest</FixtureName>
+      </FixtureTestSelector>
+      <NamedTestSelector>
+        <TestName>SocketIoClientDotNet.Tests.ClientTests.UrlTest.Parse</TestName>
+      </NamedTestSelector>
+      <NamedTestSelector>
+        <TestName>SocketIoClientDotNet.Tests.ClientTests.UrlTest.ParseNamespace</TestName>
+      </NamedTestSelector>
+      <NamedTestSelector>
+        <TestName>SocketIoClientDotNet.Tests.ClientTests.UrlTest.ParseNoProtocol</TestName>
+      </NamedTestSelector>
+      <NamedTestSelector>
+        <TestName>SocketIoClientDotNet.Tests.ClientTests.UrlTest.ParseRelativePath</TestName>
+      </NamedTestSelector>
+    </IgnoredTests>
     <PreviouslyBuiltSuccessfully>True</PreviouslyBuiltSuccessfully>
   </Settings>
 </ProjectConfiguration>
