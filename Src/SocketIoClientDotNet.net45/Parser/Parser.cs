@@ -96,10 +96,7 @@ namespace Quobject.SocketIoClientDotNet.Parser
                 if (obj.Data != null)
                 {
                     if (nsp) str.Append(",");
-                    if ((obj.Data as JToken).HasValues)
-                    {
-                        str.Append(obj.Data);
-                    }
+                    str.Append(obj.Data);
                 }
 
                 var log = LogManager.GetLogger(Global.CallerName());
@@ -115,7 +112,7 @@ namespace Quobject.SocketIoClientDotNet.Parser
                 foreach (var item in deconstruction.Buffers)
                 {
                     buffers.Add(item);
-                }                    
+                }
 
                 buffers.Insert(0, pack);
                 callback.Call(buffers.ToArray());
@@ -147,7 +144,7 @@ namespace Quobject.SocketIoClientDotNet.Parser
 
             public Decoder()
             {
-                
+
             }
 
             public void Add(string obj)
@@ -167,7 +164,7 @@ namespace Quobject.SocketIoClientDotNet.Parser
                     this.Emit(EVENT_DECODED, packet);
                 }
             }
-            
+
 
             public void Add(byte[] obj)
             {
@@ -191,7 +188,7 @@ namespace Quobject.SocketIoClientDotNet.Parser
                 Packet p = new Packet();
                 int i = 0;
 
-                p.Type = int.Parse(str.Substring(0,1));
+                p.Type = int.Parse(str.Substring(0, 1));
                 if (p.Type < 0 || p.Type > types.Count - 1) return ErrorPacket;
 
                 if (BINARY_EVENT == p.Type || BINARY_ACK == p.Type)
@@ -204,7 +201,7 @@ namespace Quobject.SocketIoClientDotNet.Parser
                     p.Attachments = int.Parse(attachments.ToString());
                 }
 
-                if (str.Length > i + 1 && "/" == str.Substring(i+1, 1))
+                if (str.Length > i + 1 && "/" == str.Substring(i + 1, 1))
                 {
                     var nsp = new StringBuilder();
                     while (true)
@@ -268,7 +265,7 @@ namespace Quobject.SocketIoClientDotNet.Parser
                     catch (Exception)
                     {
                         return ErrorPacket;
-                    }                    
+                    }
                 }
                 var log = LogManager.GetLogger(Global.CallerName());
                 log.Info(string.Format("decoded {0} as {1}", str, p));
