@@ -113,7 +113,7 @@ namespace Quobject.SocketIoClientDotNet.Client
                 _args.RemoveAt(_args.Count - 1);
             }
 
-            var jsonArgs = Parser.Packet.Args2JArray(_args);
+            var jsonArgs = Newtonsoft.Json.JsonConvert.SerializeObject(_args);
 
             var parserType = HasBinaryData.HasBinary(jsonArgs) ? Parser.Parser.BINARY_EVENT : Parser.Parser.EVENT;
             var packet = new Packet(parserType, jsonArgs);
