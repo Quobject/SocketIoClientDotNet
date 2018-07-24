@@ -18,6 +18,7 @@ namespace Quobject.SocketIoClientDotNet.Client
             CLOSED
         }
 
+        public static readonly string EVENT_ENGINE = "engine";
         public static readonly string EVENT_OPEN = "open";
         public static readonly string EVENT_CLOSE = "close";
         public static readonly string EVENT_PACKET = "packet";
@@ -200,6 +201,7 @@ namespace Quobject.SocketIoClientDotNet.Client
             log.Info(string.Format("opening {0}", Uri));
             EngineSocket = new Engine(Uri, Opts);
             Quobject.EngineIoClientDotNet.Client.Socket socket = EngineSocket;
+            Emit(EVENT_ENGINE, socket);
 
             ReadyState = ReadyStateEnum.OPENING;
             OpeningSockets.Add(Socket(Uri.PathAndQuery));
