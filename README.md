@@ -44,6 +44,10 @@ This library supports all of the features the JS client does, including events, 
 ## Framework Versions
 .NETFramework v3.5, .NETFramework v4.0, .NETFramework v4.5
 
+## N.B.
+
+This library works. There are reports of incidents where it crashes (though I was never able to reproduce them). Use this code in a responsible manner and plan for failures, because [Everything fails all the time](https://thenextweb.com/2008/04/04/werner-vogels-everything-fails-all-the-time/).
+
 ## License
 
 [MIT](http://opensource.org/licenses/MIT)
