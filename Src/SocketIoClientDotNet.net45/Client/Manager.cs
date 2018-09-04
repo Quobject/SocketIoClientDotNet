@@ -204,7 +204,7 @@ namespace Quobject.SocketIoClientDotNet.Client
             Emit(EVENT_ENGINE, socket);
 
             ReadyState = ReadyStateEnum.OPENING;
-            OpeningSockets.Add(Socket(Uri.PathAndQuery));
+            OpeningSockets.Add(Socket(Uri.AbsolutePath));
             SkipReconnect = false;
 
             var openSub = SocketIoClientDotNet.Client.On.Create(socket, Engine.EVENT_OPEN, new ListenerImpl(() =>
