@@ -60,7 +60,9 @@ namespace Quobject.SocketIoClientDotNet.Client
                 }
                 io = Managers[id];
             }
-            return io.Socket(uri.PathAndQuery);
+
+           //fix: used to paste path and query to namespace. Namespace is only supposed to use path
+            return io.Socket(uri.AbsolutePath);
         }
 
 
