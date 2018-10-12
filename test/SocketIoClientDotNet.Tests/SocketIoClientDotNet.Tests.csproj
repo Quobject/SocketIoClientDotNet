@@ -1,0 +1,66 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>    
+    <TargetFrameworks>netcoreapp2.1;net35;net40;net45</TargetFrameworks>
+  </PropertyGroup>
+
+  <!--<ItemGroup>
+    <Compile Include="..\SocketIoClientDotNet.Tests.net45\ClientTests\Connection.cs" Link="ClientTests\Connection.cs" />
+    <Compile Include="..\SocketIoClientDotNet.Tests.net45\ClientTests\ConnectionConstants.cs" Link="ClientTests\ConnectionConstants.cs" />
+    <Compile Include="..\SocketIoClientDotNet.Tests.net45\ClientTests\ServerConnectionTest.cs" Link="ClientTests\ServerConnectionTest.cs" />
+    <Compile Include="..\SocketIoClientDotNet.Tests.net45\ClientTests\UrlTest.cs" Link="ClientTests\UrlTest.cs" />
+    <Compile Include="..\SocketIoClientDotNet.Tests.net45\ModuleTests\HasBinaryDataTest.cs" Link="ModuleTests\HasBinaryDataTest.cs" />
+    <Compile Include="..\SocketIoClientDotNet.Tests.net45\ParserTests\ByteArrayTest.cs" Link="ParserTests\ByteArrayTest.cs" />
+    <Compile Include="..\SocketIoClientDotNet.Tests.net45\ParserTests\Helpers.cs" Link="ParserTests\Helpers.cs" />
+    <Compile Include="..\SocketIoClientDotNet.Tests.net45\ParserTests\ParserTest.cs" Link="ParserTests\ParserTest.cs" />
+  </ItemGroup>-->
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Src\SocketIoClientDotNet\SocketIoClientDotNet.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="ClientTests\Connection_device.cs" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net35'">
+    <PackageReference Include="xunit" Version="1.9.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <Compile Remove="ClientTests\ServerConnectionTest.cs" />
+  </ItemGroup>
+  
+  <ItemGroup Condition="'$(TargetFramework)' == 'net40'">
+    <PackageReference Include="xunit" Version="1.9.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <Compile Remove="ClientTests\ServerConnectionTest.cs" />
+  </ItemGroup>
+  
+  <ItemGroup Condition="'$(TargetFramework)' == 'net45'">
+    <PackageReference Include="xunit" Version="2.4.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <Compile Remove="ClientTests\ServerConnectionTest_net35.cs" />
+  </ItemGroup>
+  
+  <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp2.1'">
+    <PackageReference Include="xunit" Version="2.4.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <Compile Remove="ClientTests\ServerConnectionTest_net35.cs" />
+  </ItemGroup>
+
+</Project>
