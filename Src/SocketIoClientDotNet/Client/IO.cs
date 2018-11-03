@@ -6,7 +6,7 @@ namespace Quobject.SocketIoClientDotNet.Client
 {
     public class IO
     {
-        private static readonly ImmutableDictionary<string, Manager> Managers = ImmutableDictionary.Create<string, Manager>();
+        private static ImmutableDictionary<string, Manager> Managers = ImmutableDictionary.Create<string, Manager>();
 
         /// <summary>
         /// Protocol version
@@ -55,7 +55,7 @@ namespace Quobject.SocketIoClientDotNet.Client
                 if (!Managers.ContainsKey(id))
                 {
                     log.Info( string.Format("new io instance for {0}", id));
-                    Managers.Add(id, new Manager(uri, opts));
+                    Managers = Managers.Add(id, new Manager(uri, opts));
 
                 }
                 io = Managers[id];
