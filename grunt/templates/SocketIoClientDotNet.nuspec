@@ -13,20 +13,20 @@
         <dependency id="SuperSocket.ClientEngine.Core" version="0.10.0" />
         <dependency id="Newtonsoft.Json" version="9.0.1" />
         <dependency id="System.Threading.Tasks.Unofficial" version="3.1.0" />
-        <dependency id="EngineIoClientDotNet" version="1.0.7" />
+        <dependency id="EngineIoClientDotNet" version="1.0.8" />
       </group>
       <group targetFramework="net40">
         <dependency id="WebSocket4Net" version="0.15.2" />
         <dependency id="SuperSocket.ClientEngine.Core" version="0.10.0" />
         <dependency id="Newtonsoft.Json" version="9.0.1" />
-        <dependency id="EngineIoClientDotNet" version="1.0.7" />
+        <dependency id="EngineIoClientDotNet" version="1.0.8" />
       </group>
       <group targetFramework="net45">
         <dependency id="WebSocket4Net" version="0.15.2" />
         <dependency id="SuperSocket.ClientEngine.Core" version="0.10.0" />
         <dependency id="Newtonsoft.Json" version="9.0.1" />
-        <dependency id="EngineIoClientDotNet" version="1.0.7" />
-        <dependency id="System.Collections.Immutable" version="1.4.0" />
+        <dependency id="EngineIoClientDotNet" version="1.0.8" />
+        <dependency id="System.Collections.Immutable" version="1.5.0" />
       </group>
       <!--<group targetFramework="netstandard1.3">
         <dependency id="WebSocket4Net" version="0.15.2" />

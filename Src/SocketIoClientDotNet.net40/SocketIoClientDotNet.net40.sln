@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2015
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocketIoClientDotNet.net40", "SocketIoClientDotNet.net40.csproj", "{53AE4914-A35B-406C-91ED-7E3D9C950F45}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocketIoClientDotNet.Tests.net40", "..\SocketIoClientDotNet.Tests.net40\SocketIoClientDotNet.Tests.net40.csproj", "{DD1A4F5E-5606-4989-9DF8-C1BBD50CD850}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{53AE4914-A35B-406C-91ED-7E3D9C950F45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53AE4914-A35B-406C-91ED-7E3D9C950F45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53AE4914-A35B-406C-91ED-7E3D9C950F45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53AE4914-A35B-406C-91ED-7E3D9C950F45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD1A4F5E-5606-4989-9DF8-C1BBD50CD850}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD1A4F5E-5606-4989-9DF8-C1BBD50CD850}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD1A4F5E-5606-4989-9DF8-C1BBD50CD850}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD1A4F5E-5606-4989-9DF8-C1BBD50CD850}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {45C87482-D4FA-4D6D-A43F-DAC8465AF82D}
+	EndGlobalSection
+EndGlobal

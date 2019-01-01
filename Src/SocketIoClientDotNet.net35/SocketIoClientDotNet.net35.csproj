@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E3D3A67D-9A1E-4915-8A2D-1C0E4447F5E0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SocketIoClientDotNet</RootNamespace>
+    <AssemblyName>SocketIoClientDotNet</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\net35\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EngineIoClientDotNet, Version=1.0.8.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\EngineIoClientDotNet.1.0.8\lib\net35\EngineIoClientDotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.9.0.1\lib\net35\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperSocket.ClientEngine, Version=0.10.0.0, Culture=neutral, PublicKeyToken=ee9af13f57f00acc, processorArchitecture=MSIL">
+      <HintPath>packages\SuperSocket.ClientEngine.Core.0.10.0\lib\net35-client\SuperSocket.ClientEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Threading.Tasks.NET35, Version=3.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\System.Threading.Tasks.Unofficial.3.1\lib\net35\System.Threading.Tasks.NET35.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebSocket4Net, Version=0.15.2.11, Culture=neutral, PublicKeyToken=eb4e154b696bf72a, processorArchitecture=MSIL">
+      <HintPath>packages\WebSocket4Net.0.15.2\lib\net35\WebSocket4Net.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\SocketIoClientDotNet.net45\Client\AckImpl.cs">
+      <Link>Client\AckImpl.cs</Link>
+    </Compile>
+    <Compile Include="..\SocketIoClientDotNet.net45\Client\IAck.cs">
+      <Link>Client\IAck.cs</Link>
+    </Compile>
+    <Compile Include="..\SocketIoClientDotNet.net45\Client\IO_net35.cs">
+      <Link>Client\IO_net35.cs</Link>
+    </Compile>
+    <Compile Include="..\SocketIoClientDotNet.net45\Client\Manager_net35.cs">
+      <Link>Client\Manager_net35.cs</Link>
+    </Compile>
+    <Compile Include="..\SocketIoClientDotNet.net45\Client\On.cs">
+      <Link>Client\On.cs</Link>
+    </Compile>
+    <Compile Include="..\SocketIoClientDotNet.net45\Client\SocketIOException.cs">
+      <Link>Client\SocketIOException.cs</Link>
+    </Compile>
+    <Compile Include="..\SocketIoClientDotNet.net45\Client\Socket_net35.cs">
+      <Link>Client\Socket_net35.cs</Link>
+    </Compile>
+    <Compile Include="..\SocketIoClientDotNet.net45\Client\Url.cs">
+      <Link>Client\Url.cs</Link>
+    </Compile>
+    <Compile Include="..\SocketIoClientDotNet.net45\Modules\HasBinaryData.cs">
+      <Link>Modules\HasBinaryData.cs</Link>
+    </Compile>
+    <Compile Include="..\SocketIoClientDotNet.net45\Parser\Binary.cs">
+      <Link>Parser\Binary.cs</Link>
+    </Compile>
+    <Compile Include="..\SocketIoClientDotNet.net45\Parser\Packet.cs">
+      <Link>Parser\Packet.cs</Link>
+    </Compile>
+    <Compile Include="..\SocketIoClientDotNet.net45\Parser\Parser.cs">
+      <Link>Parser\Parser.cs</Link>
+    </Compile>
+    <Compile Include="Collections.Concurrent\ConcurrentQueue.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitignore" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

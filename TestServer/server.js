@@ -9,9 +9,9 @@
   app = express(),
   fs = require('fs'),
   options = {
-    key: fs.readFileSync(__dirname + '/testme.quobject.com.key'),
-    cert: fs.readFileSync(__dirname + '/testme.quobject.com.cert'),
-    requestCert: true
+    key: fs.readFileSync(__dirname + '/privkey.pem'),
+    cert: fs.readFileSync(__dirname + '/fullchain.pem'),
+    requestCert: false
   },
   io,
   io_ssl,

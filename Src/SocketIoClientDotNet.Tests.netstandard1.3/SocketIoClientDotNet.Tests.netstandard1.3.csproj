@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>    
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\SocketIoClientDotNet.Tests.net45\ClientTests\Connection.cs" Link="ClientTests\Connection.cs" />
+    <Compile Include="..\SocketIoClientDotNet.Tests.net45\ClientTests\ConnectionConstants.cs" Link="ClientTests\ConnectionConstants.cs" />
+    <Compile Include="..\SocketIoClientDotNet.Tests.net45\ClientTests\ServerConnectionTest.cs" Link="ClientTests\ServerConnectionTest.cs" />
+    <Compile Include="..\SocketIoClientDotNet.Tests.net45\ClientTests\UrlTest.cs" Link="ClientTests\UrlTest.cs" />
+    <Compile Include="..\SocketIoClientDotNet.Tests.net45\ModuleTests\HasBinaryDataTest.cs" Link="ModuleTests\HasBinaryDataTest.cs" />
+    <Compile Include="..\SocketIoClientDotNet.Tests.net45\ParserTests\ByteArrayTest.cs" Link="ParserTests\ByteArrayTest.cs" />
+    <Compile Include="..\SocketIoClientDotNet.Tests.net45\ParserTests\Helpers.cs" Link="ParserTests\Helpers.cs" />
+    <Compile Include="..\SocketIoClientDotNet.Tests.net45\ParserTests\ParserTest.cs" Link="ParserTests\ParserTest.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+    <PackageReference Include="xunit" Version="2.2.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ParserTests\" />
+    <Folder Include="ModuleTests\" />
+    <Folder Include="ClientTests\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SocketIoClientDotNet.netstandard1.3\SocketIoClientDotNet.netstandard1.3.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
+  </ItemGroup>
+
+</Project>
