@@ -402,6 +402,7 @@ namespace Quobject.SocketIoClientDotNet.Client
             {
                 sub.Destroy();
             }
+            Reconnecting = false;
         }
 
         public void Close()
